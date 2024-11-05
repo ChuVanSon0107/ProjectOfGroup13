@@ -32,7 +32,7 @@ public class GameOverMenu extends MainMenu{
 	@Override
 	public void Render(Graphics graphics) {
 		// TODO Auto-generated method stub
-graphics.drawImage(Resources.TEXTURES.get(Resources.BACKGROUND),0, 0, WindowManager.WIDTH, WindowManager.HEIGHT, null);
+		graphics.drawImage(Resources.TEXTURES.get(Resources.BACKGROUND),0, 0, WindowManager.WIDTH, WindowManager.HEIGHT, null);
 		
 		graphics.setFont(new Font("Arial", Font.BOLD, 40));
 		graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON), 0, 0, 800, 200, null);
