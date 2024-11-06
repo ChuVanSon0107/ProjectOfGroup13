@@ -13,14 +13,12 @@ public class IntroMenu extends GameState{
 	int ufoX, ufoY;
 	protected IntroMenu(GameStateManager state) {
 		super(state);
-		// TODO Auto-generated constructor stub
 		ufoX = WindowManager.WIDTH - 20;
 		ufoY = WindowManager.HEIGHT/3;
 	}
 
 	@Override
 	public void Loop() {
-		// TODO Auto-generated method stub
 		ufoX-= 4;
 		if(ufoX <= 80) {
 			gameStateManager.setGameStates(1, new PlayingState(gameStateManager));
@@ -30,7 +28,6 @@ public class IntroMenu extends GameState{
 
 	@Override
 	public void Render(Graphics graphics) {
-		// TODO Auto-generated method stub
 		graphics.drawImage(Resources.TEXTURES.get(Resources.UNIVERSE), 0,0 , WindowManager.WIDTH, WindowManager.HEIGHT, null);
 		graphics.drawImage(Resources.TEXTURES.get(Resources.PLANET), 10,WindowManager.HEIGHT/3 - 40, 200, 200, null);
 		graphics.drawImage(Resources.TEXTURES.get(Resources.UFO), ufoX,ufoY , Tile.size, Tile.size, null);
@@ -41,14 +38,12 @@ public class IntroMenu extends GameState{
 	
 	@Override
 	public void KeyPressed(int keyCode) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void KeyReleased(int keyCode) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 }

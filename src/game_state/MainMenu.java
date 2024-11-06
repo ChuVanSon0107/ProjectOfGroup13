@@ -24,7 +24,7 @@ public class MainMenu extends GameState{
  	
  	public MainMenu(GameStateManager gameStateManager) {
 		super(gameStateManager);
-		this.optionsMenu= new String[]{START_GAME, LEVEL_GAME, QUIT_GAME};
+		this.optionsMenu = new String[]{START_GAME, LEVEL_GAME, QUIT_GAME};
 		this.levelMenu = new String[]{ EASY_GAME, MEDIUM_GAME, HARD_GAME};
 		this.selected = 0;
 		level = 0;

@@ -10,6 +10,7 @@ public class GameStateManager {
 		gameStates = new GameState[] {
 			new MainMenu(this),
 			null,
+			new GuideMenu(this),
 			new PauseMenu(this),
 			new GameOverMenu(this),
 			new DaoLyMenu(this),
