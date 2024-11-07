@@ -69,7 +69,10 @@ public class Entity extends Rectangle{
 	public void SetCenterY(int y) {
 		super.y= y - height/2;
 	}
-	
+	public void setPosition(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
 	public void AnimationDisplay() {
 		if(curDelayTime > 0)curDelayTime--;
 		else {

@@ -135,7 +135,11 @@ public class World {
 		
 	}
 	public void ChangeRoom() {
-		if (player.getCenterY() < rooms[curRoom].GetTile(0, 0).y) {
+		int x = (int) player.getX() / 50;
+		int y = (int) player.getY() / 50;
+		//System.out.println(x + " " + y);
+		System.out.println(rooms[curRoom].GetTile(y,x).getID());
+		if (rooms[curRoom].GetTile(y,x).getID() >= 93 &&  rooms[curRoom].GetTile(y,x).GetProperty() <= 98 ) {
 			curRoom++;
 			if(curRoom==count) {	
 				return;
@@ -146,7 +150,7 @@ public class World {
 		}
 		if (player.getCenterY() > rooms[curRoom].GetTile(Room.Ysize-1, 0).y + Tile.size) {
 			curRoom--;
-			player.SetCenterY(player.height);
+			player.setPosition(7*50,3*50);
 			player.SetRoom(rooms[curRoom]);
 			player.GetRPos().SetExistTime(0);
 		}
