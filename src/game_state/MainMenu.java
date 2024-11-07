@@ -78,8 +78,12 @@ public class MainMenu extends GameState{
 			case KeyEvent.VK_ENTER:
 				switch (this.optionsMenu[selected]){
 					case START_GAME:
-						gameStateManager.setGameStates(5, new IntroMenu(gameStateManager));
-						gameStateManager.setCurState(5);
+						// gameStateManager.setGameStates(5, new IntroMenu(gameStateManager));
+						// gameStateManager.setCurState(5);
+						gameStateManager.setGameStates(6, new GuideMenu(gameStateManager));
+						gameStateManager.setCurState(6);
+
+
 						break;
 					case QUIT_GAME:
 						System.exit(0);

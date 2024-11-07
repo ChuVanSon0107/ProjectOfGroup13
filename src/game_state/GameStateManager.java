@@ -10,11 +10,14 @@ public class GameStateManager {
 		gameStates = new GameState[] {
 			new MainMenu(this),
 			null,
-			new GuideMenu(this),
 			new PauseMenu(this),
 			new GameOverMenu(this),
 			new DaoLyMenu(this),
-			null
+			null,
+
+			//add
+			new GuideMenu(this),
+			new StoryMenu(this)
 		};
 		curState = 0;
 	}

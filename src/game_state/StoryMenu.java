@@ -5,11 +5,10 @@ import java.awt.Graphics;
 import main.WindowManager;
 import resources.Resources;
 
-public class GuideMenu  extends GameState {
-
+public class StoryMenu extends GameState {
     int timeChangeMenu = 150;
 
-    public GuideMenu(GameStateManager state){
+    public StoryMenu(GameStateManager state){
         super(state);
     }
 
@@ -17,14 +16,14 @@ public class GuideMenu  extends GameState {
     public void Loop() {
         timeChangeMenu --;
         if(timeChangeMenu <= 0){
-            gameStateManager.setGameStates(7, new StoryMenu(gameStateManager));
-			gameStateManager.setCurState(7);
+            gameStateManager.setGameStates(1, new PlayingState(gameStateManager));
+			gameStateManager.setCurState(1);
         }
     }
 
     @Override
     public void Render(Graphics graphics) {
-		graphics.drawImage(Resources.TEXTURES.get(Resources.GUIDEMENU), 0,0 , WindowManager.WIDTH, WindowManager.HEIGHT, null);
+		graphics.drawImage(Resources.TEXTURES.get(Resources.STORYMENU), 0,0 , WindowManager.WIDTH, WindowManager.HEIGHT, null);
     }
 
     @Override

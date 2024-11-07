@@ -21,8 +21,10 @@ public class IntroMenu extends GameState{
 	public void Loop() {
 		ufoX-= 4;
 		if(ufoX <= 80) {
-			gameStateManager.setGameStates(1, new PlayingState(gameStateManager));
-			gameStateManager.setCurState(1);
+			// gameStateManager.setGameStates(1, new PlayingState(gameStateManager));
+			// gameStateManager.setCurState(1);
+			gameStateManager.setGameStates(6, new GuideMenu(gameStateManager));
+			gameStateManager.setCurState(6);
 		}
 	}
 

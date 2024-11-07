@@ -94,6 +94,15 @@ public class Loader {
             Resources.TEXTURES.add(Resources.MONSTER1_2, ImageIO.read(getClass().getResource("/image/Monster1_2.png")));
             Resources.TEXTURES.add(Resources.MONSTER1_ATTACK, ImageIO.read(getClass().getResource("/image/Monster1_attack.png")));
             Resources.TEXTURES.add(Resources.E, ImageIO.read(getClass().getResource("/image/E.png")));
+
+
+            //GUIDEMENU
+            Resources.TEXTURES.add(Resources.GUIDEMENU, ImageIO.read(getClass().getResource("/image/guideMenu.jpg")));
+
+            //STORYMENU
+            Resources.TEXTURES.add(Resources.STORYMENU, ImageIO.read(getClass().getResource("/image/storyMenu.jpg")));
+
+
         }catch (Exception e) {
         		System.out.print("Load Failed\n");
                 e.printStackTrace();

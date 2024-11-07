@@ -81,6 +81,12 @@ public class Resources {
 	    public static final byte MONSTER1_2 = 74;
 	    public static final byte MONSTER1_ATTACK = 75;
 	    public static final byte E=76;
+
+		//GuidMenu
+		public static final byte GUIDEMENU = 77;
+		//StoryMenu
+		public static final byte STORYMENU = 78;
+
 	    public static ArrayList<BufferedImage> TEXTURES = new ArrayList<>();
 
 	}
