@@ -101,7 +101,7 @@ public class PlayingState extends GameState{
 			if(timeToGameOver==0) {
 				GameOverMenu.result=false;
 				gameStateManager.blood_fall=0;
-				gameStateManager.setCurState(3);
+				gameStateManager.setCurState(5);
 			}
 		}
 		}else {
@@ -192,7 +192,7 @@ public class PlayingState extends GameState{
 			}
 			break;
 		case KeyEvent.VK_P:	
-			gameStateManager.setCurState(2);
+			gameStateManager.setCurState(4);
 			break;
 		case KeyEvent.VK_ENTER:
 			if(this.inConversation) {

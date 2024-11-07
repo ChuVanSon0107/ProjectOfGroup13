@@ -9,15 +9,17 @@ import java.awt.event.KeyEvent;
 
 public class PauseMenu extends MainMenu{
 
-	private static final String CONTINUE_GAME = "Continue";
-	private static final String QUIT_GAME = "Quit";
+	private static final String CONTINUE_GAME = "CONTINUE";
+	private static final String QUIT_GAME = "QUIT";
 	private static final String LABEL = "PAUSE";
 	protected int selected;
+
 	public PauseMenu(GameStateManager gameStateManager){
 		super(gameStateManager);
 		super.optionsMenu = new String[]{ CONTINUE_GAME, QUIT_GAME};
 		this.selected = 0;
 	}
+
 	@Override
 	public void Loop() {
 		
@@ -34,7 +36,7 @@ public class PauseMenu extends MainMenu{
 		graphics.drawString(LABEL, WindowManager.WIDTH/2 - 115, WindowManager.HEIGHT/5);
 		for (int i = 0; i < this.optionsMenu.length; i++) {
 			graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON_1), 0, 180 + 80 * i, 400, 80, null);
-			if(i==this.selected) {
+			if(i == this.selected) {
 				graphics.setColor(Color.BLACK);
 				graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON_1), 0, 180 + 80 * i, 500, 80, null);
 			}
@@ -56,7 +58,7 @@ public class PauseMenu extends MainMenu{
 			case KeyEvent.VK_ENTER:
 				switch (this.optionsMenu[selected]){
 					case CONTINUE_GAME:
-						gameStateManager.setCurState(1);
+						gameStateManager.setCurState(3);
 						System.out.print("Continue\n");
 						break;
 					case QUIT_GAME:
