@@ -6,14 +6,16 @@ import java.awt.event.KeyEvent;
 import main.WindowManager;
 import resources.Resources;
 
-public class GameOverMenu extends MainMenu{
+public class GameOverMenu extends GameState{
 	public static boolean result ;
 	protected String[] gameoverMenu = {};
 	private static final String WIN = "YOU WIN";
 	private static final String LOSE = "YOU LOSE";
 	private static final String RESTART = "RESTART";
 	private static final String MAINMENU = "MAIN MENU";
-	protected int selected;
+	private String[] optionsMenu;
+	private int selected;
+
 	public GameOverMenu(GameStateManager gameStateManager){
 		super(gameStateManager);
 		this.gameoverMenu = new String[]{WIN, LOSE};
@@ -85,7 +87,7 @@ public class GameOverMenu extends MainMenu{
 
 	@Override
 	public void KeyReleased(int keyCode) {
-		// TODO Auto-generated method stub
+
 		
 	}
 }

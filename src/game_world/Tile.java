@@ -18,10 +18,10 @@ public class Tile extends Rectangle{
 	public Tile(byte id,int x,int y) {
 		super(x * size, y * size, size, size);
 		this.id = id;
-		if(id== Resources.WALL || id==Resources.STONE || id== Resources.TREE)prop=1;
-		else if(id >=Resources.WALL1 && id<=Resources.WALL21)prop = 1;
-		else if(id==Resources.WATER || id==Resources.DIRT)prop=2;
-		else prop=0;
+		if(id == Resources.WALL || id == Resources.STONE || id == Resources.TREE) prop = 1;
+		else if(id >= Resources.WALL1 && id <= Resources.WALL21) prop = 1;
+		else if(id == Resources.WATER || id == Resources.DIRT) prop=2;
+		else prop = 0;
 	}
 	public byte GetProperty() {
 		return prop;

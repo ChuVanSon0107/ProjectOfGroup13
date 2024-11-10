@@ -7,16 +7,17 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 
-public class PauseMenu extends MainMenu{
+public class PauseMenu extends GameState {
 
 	private static final String CONTINUE_GAME = "CONTINUE";
 	private static final String QUIT_GAME = "QUIT";
 	private static final String LABEL = "PAUSE";
-	protected int selected;
+	private String[] optionsMenu = {};
+	private int selected;
 
 	public PauseMenu(GameStateManager gameStateManager){
 		super(gameStateManager);
-		super.optionsMenu = new String[]{ CONTINUE_GAME, QUIT_GAME};
+		this.optionsMenu = new String[]{ CONTINUE_GAME, QUIT_GAME};
 		this.selected = 0;
 	}
 

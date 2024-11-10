@@ -20,17 +20,20 @@ public class Enemy extends Entity{
 	
 	private boolean alive = true;
 	public void SetAlive(boolean alive) {
-		this.alive=alive;
+		this.alive = alive;
 	}public boolean GetAlive() {
 		return alive;
 	}
 	protected Room room;
 	protected Player player;
+
 	public void CollisionPlayer() {
 		
-	}public void CollisionQ() {
+	}
+	public void CollisionQ() {
 		
-	}public void CollisionR() {
+	}
+	public void CollisionR() {
 		
 	}
 	public void CollisionE() {

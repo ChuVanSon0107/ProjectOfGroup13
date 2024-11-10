@@ -5,7 +5,10 @@ import java.awt.*;
 public abstract class GameState {
 
 	protected GameStateManager gameStateManager;
-	protected GameState(GameStateManager state){this.gameStateManager = state;};
+	
+	protected GameState(GameStateManager state){
+		this.gameStateManager = state;
+	};
 	
 	public abstract void Loop();
 	public abstract void Render(Graphics graphics);
