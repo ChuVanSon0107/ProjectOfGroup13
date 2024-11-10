@@ -82,39 +82,60 @@ public class Resources {
 	    public static final byte MONSTER1_ATTACK = 75;
 	    public static final byte E=76;
 
-
+		// GRASS
 		public static final byte GRASS1 = 77;
 		public static final byte GRASS2 = 78;
 		public static final byte GRASS3 = 79;
 		public static final byte GRASS4 = 80;
-
+		// FLOWER
 		public static final byte FLOWER1 = 81;
 		public static final byte FLOWER2 = 82;
 		public static final byte FLOWER3 = 83;
 		public static final byte FLOWER4 = 84;
-
+		// TREE
 		public static final byte TREE1 = 85;
 		public static final byte TREE2 = 86;
 		public static final byte TREE3 = 87;
 		public static final byte TREE4 = 88;
 		public static final byte TREE5 = 89;
 		public static final byte TREE6 = 90;
-
+		// HOLE
 		public static final byte HOLE1 = 91;
 		public static final byte HOLE2 = 92;
-
+		// CAVE
 		public static final byte CAVE1 = 93;
 		public static final byte CAVE2 = 94;
 		public static final byte CAVE3 = 95;
 		public static final byte CAVE4 = 96;
 		public static final byte CAVE5 = 97;
 		public static final byte CAVE6 = 98;
-
+		
+		// Water
+		public static final byte WATER1 = 99;
+		public static final byte WATER2 = 100;
+		public static final byte WATER3 = 101;
+		public static final byte WATER4 = 102;
+		public static final byte WATER5 = 103;
+		public static final byte WATER6 = 104;
+		public static final byte WATER7 = 105;
+		public static final byte WATER8 = 106;
+		public static final byte WATER9 = 107;
+		public static final byte WATER10 = 108;
+		public static final byte WATER11 = 109;
+		public static final byte WATER12 = 110;
+		public static final byte WATER13 = 111;
+		public static final byte WATER14 = 112;
+		public static final byte WATER15 = 113;
+		public static final byte WATER16 = 114;
+		public static final byte WATER17 = 115;
+		public static final byte WATER18 = 116;
+	
 		//GuidMenu
 		public static final byte GUIDEMENU = 99;
 		//StoryMenu
 		public static final byte STORYMENU = 100;
 
+	
 	    public static ArrayList<BufferedImage> TEXTURES = new ArrayList<>();
 
 	}
