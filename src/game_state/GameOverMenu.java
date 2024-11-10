@@ -32,7 +32,7 @@ public class GameOverMenu extends MainMenu{
 	@Override
 	public void Render(Graphics graphics) {
 		// TODO Auto-generated method stub
-graphics.drawImage(Resources.TEXTURES.get(Resources.BACKGROUND),0, 0, WindowManager.WIDTH, WindowManager.HEIGHT, null);
+		graphics.drawImage(Resources.TEXTURES.get(Resources.BACKGROUND),0, 0, WindowManager.WIDTH, WindowManager.HEIGHT, null);
 		
 		graphics.setFont(new Font("Arial", Font.BOLD, 40));
 		graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON), 0, 0, 800, 200, null);
@@ -41,7 +41,7 @@ graphics.drawImage(Resources.TEXTURES.get(Resources.BACKGROUND),0, 0, WindowMana
 		graphics.drawString(this.gameoverMenu[index], WindowManager.WIDTH/2 - 115, WindowManager.HEIGHT/5);
 		for (int i = 0; i < this.optionsMenu.length; i++) {
 			graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON_1), 0, 180 + 80 * i, 400, 80, null);
-			if(i==this.selected) {
+			if(i == this.selected) {
 				graphics.setColor(Color.BLACK);
 				graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON_1), 0, 180 + 80 * i, 500, 80, null);
 			}
@@ -65,8 +65,8 @@ graphics.drawImage(Resources.TEXTURES.get(Resources.BACKGROUND),0, 0, WindowMana
 			case KeyEvent.VK_ENTER:
 				switch (this.optionsMenu[selected]){
 					case RESTART:
-						gameStateManager.setGameStates(1, new PlayingState(gameStateManager));
-						gameStateManager.setCurState(1);
+						gameStateManager.setGameStates(3, new PlayingState(gameStateManager));
+						gameStateManager.setCurState(3);
 						break;
 					case MAINMENU:
 						gameStateManager.blood_fall = 0;

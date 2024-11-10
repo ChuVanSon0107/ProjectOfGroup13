@@ -39,7 +39,10 @@ public class Loader {
             Resources.TEXTURES.add(Resources.ITEM, ImageIO.read(getClass().getResource("/image/item.png")));
             Resources.TEXTURES.add(Resources.OBSTACLE, ImageIO.read(getClass().getResource("/image/obstacel.png")));
             Resources.TEXTURES.add(Resources.OBSTACLE_2, ImageIO.read(getClass().getResource("/image/obstacel_2.png")));
-            Resources.TEXTURES.add(Resources.BACKGROUND, ImageIO.read(getClass().getResource("/image/anh_nen.jpg")));
+            
+            //Resources.TEXTURES.add(Resources.BACKGROUND, ImageIO.read(getClass().getResource("/image/anh_nen.jpg")));
+            Resources.TEXTURES.add(Resources.BACKGROUND, ImageIO.read(getClass().getResource("/image/background.jpg")));
+
             Resources.TEXTURES.add(Resources.PLAYER_ICE, ImageIO.read(getClass().getResource("/image/ice.png")));
             Resources.TEXTURES.add(Resources.F_MONSTER, ImageIO.read(getClass().getResource("/image/f_monster.png")));
             Resources.TEXTURES.add(Resources.F_MONSTER_2, ImageIO.read(getClass().getResource("/image/f_monster_2.png")));
@@ -55,8 +58,13 @@ public class Loader {
             Resources.TEXTURES.add(Resources.MANAB, ImageIO.read(getClass().getResource("/image/MPBar.png")));
             Resources.TEXTURES.add(Resources.ARMORB, ImageIO.read(getClass().getResource("/image/DefBar.png")));
             Resources.TEXTURES.add(Resources.ULTIB, ImageIO.read(getClass().getResource("/image/RBar.png")));
-            Resources.TEXTURES.add(Resources.BUTTON_1, ImageIO.read(getClass().getResource("/image/Button_1.png")));
-            Resources.TEXTURES.add(Resources.BUTTON, ImageIO.read(getClass().getResource("/image/Button_2.png")));
+            
+            //Resources.TEXTURES.add(Resources.BUTTON_1, ImageIO.read(getClass().getResource("/image/Button_1.png")));
+            //Resources.TEXTURES.add(Resources.BUTTON, ImageIO.read(getClass().getResource("/image/Button_2.png")));
+            Resources.TEXTURES.add(Resources.BUTTON_1, ImageIO.read(getClass().getResource("/image/Button_01.png")));
+            Resources.TEXTURES.add(Resources.BUTTON, ImageIO.read(getClass().getResource("/image/Button_02.png")));
+
+
             Resources.TEXTURES.add(Resources.UFO, ImageIO.read(getClass().getResource("/image/ufo.png")));
             Resources.TEXTURES.add(Resources.PLANET, ImageIO.read(getClass().getResource("/image/planet.png")));
             Resources.TEXTURES.add(Resources.UNIVERSE, ImageIO.read(getClass().getResource("/image/universe.jpg")));
@@ -86,6 +94,15 @@ public class Loader {
             Resources.TEXTURES.add(Resources.MONSTER1_2, ImageIO.read(getClass().getResource("/image/Monster1_2.png")));
             Resources.TEXTURES.add(Resources.MONSTER1_ATTACK, ImageIO.read(getClass().getResource("/image/Monster1_attack.png")));
             Resources.TEXTURES.add(Resources.E, ImageIO.read(getClass().getResource("/image/E.png")));
+
+
+            //GUIDEMENU
+            Resources.TEXTURES.add(Resources.GUIDEMENU, ImageIO.read(getClass().getResource("/image/guideMenu.jpg")));
+
+            //STORYMENU
+            Resources.TEXTURES.add(Resources.STORYMENU, ImageIO.read(getClass().getResource("/image/storyMenu.jpg")));
+
+
         }catch (Exception e) {
         		System.out.print("Load Failed\n");
                 e.printStackTrace();
