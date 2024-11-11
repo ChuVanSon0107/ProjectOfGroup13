@@ -47,17 +47,18 @@ public class Conversation {
 	private void DisplaySentence(Graphics g) {
 		if(currentSentence < imgIDs.length) {
 			g.setColor(Color.WHITE);
-		g.drawImage(Resources.TEXTURES.get(imgIDs[this.currentSentence]), 10, y + height/10, 2 * Tile.size, 2*Tile.size, null);
-		g.setFont(new Font("Arial", Font.ROMAN_BASELINE, 30));
-		g.drawString(sentences[this.currentSentence], 10+ 3 * Tile.size, y+height/2);
-		
+			g.drawImage(Resources.TEXTURES.get(imgIDs[this.currentSentence]), 10, y + height/10, 2 * Tile.size, 2*Tile.size, null);
+			g.setFont(new Font("Arial", Font.ROMAN_BASELINE, 30));
+			g.drawString(sentences[this.currentSentence], 10 + 3 * Tile.size, y + height / 2);
+			
 		}
 		
 	}
 	public void ChangeSentence() {
-		if(state == 1)
-		this.currentSentence ++;
-		if(currentSentence >= imgIDs.length)state = 2;
+		if(state == 1){
+			this.currentSentence ++;
+		}
+		if(currentSentence >= imgIDs.length) state = 2;
 	}
 	public void Display(Graphics g) {
 		g.drawImage(Resources.TEXTURES.get(Resources.BUTTON), 0, y, WindowManager.WIDTH, height, null);

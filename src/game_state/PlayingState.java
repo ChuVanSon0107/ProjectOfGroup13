@@ -33,22 +33,22 @@ public class PlayingState extends GameState{
 				"Sao mình lại về chỗ này ???"
 			};
 			byte[] imgIDs = new byte[] {
-					Resources.PLAYER,
-					Resources.PLAYER
+				Resources.PLAYER,
+				Resources.PLAYER
 			};
 			this.conversation = new Conversation(150, imgIDs, sentences);
 		}
 		else {
 			this.inConversation = true;
 			String[] sentences = new String[]{
-				"Lũ Pales khốn kiếp",
-				"Ta sẽ tiêu diệt các ngươi",
-				"Giỏi vào mà ăn"
+				"Ta đã từng nương tay cho các ngươi một con đường sống",
+				"Nhưng các ngươi không biết trân trọng cơ hội khiến hôm nay ta phải diệt cỏ tận gốc",
+				"Pháp sư song hệ tiêu diệt hết phe Hắc ám và cứu được con gái mình trả lại bình yên cho Hành tinh Closeup mãi mãi về sau."
 			};
 			byte[] imgIDs = new byte[] {
 					Resources.PLAYER,
 					Resources.PLAYER,
-					Resources.MONSTER
+					Resources.PLAYER
 			};
 			this.conversation = new Conversation(150, imgIDs, sentences);
 		}
@@ -76,12 +76,12 @@ public class PlayingState extends GameState{
 								"Mãi bên nhau bạn nhé <3"
 							};
 							byte[] imgIDs = new byte[] {
-									Resources.AD,
-									Resources.PLAYER,
-									Resources.PLAYER,
-									Resources.PLAYER,
-									Resources.AD,
-									Resources.AD
+								Resources.AD,
+								Resources.PLAYER,
+								Resources.PLAYER,
+								Resources.PLAYER,
+								Resources.AD,
+								Resources.AD
 							};
 							this.conversation = new Conversation(150, imgIDs, sentences);
 							GameOverMenu.result = true;
