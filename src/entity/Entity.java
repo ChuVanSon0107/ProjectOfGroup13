@@ -20,13 +20,13 @@ public class Entity extends Rectangle{
 	// delaytime = 20s // cố định sẽ không thay đổi
 	// 19 curDe
 	public Entity(int x, int y, Vector facing, int delayTime, int frameCount, byte imgID, float speed) {
-		super(x*Tile.size, y*Tile.size, Tile.size, Tile.size);
+		super(x*Tile.size, y * Tile.size, Tile.size, Tile.size);
 		this.facing = facing;
 		this.delayTime = delayTime;
 		this.frameCount = frameCount;
 		this.imgID = imgID;
 		this.speed = speed;
-		curDelayTime=delayTime;
+		curDelayTime = delayTime;
 	}
 	
 	public void OnLoop() {
@@ -71,10 +71,10 @@ public class Entity extends Rectangle{
 	}
 	
 	public void AnimationDisplay() {
-		if(curDelayTime > 0)curDelayTime--;
+		if(curDelayTime > 0) curDelayTime--;
 		else {
 			curFrame = (curFrame + 1) % frameCount;
-			curDelayTime=delayTime;
+			curDelayTime = delayTime;
 		}
 	}
 }

@@ -33,7 +33,8 @@ public class WindowManager {
     public void addKeyListener(KeyListener listener){
         try {
             this.panel.addKeyListener(listener);
-        } catch(NullPointerException e) {
+        } 
+        catch(NullPointerException e) {
             System.err.println("[WindowManager]: Error! Tried to add KeyListener before JPanel");
             System.exit(-1);
         }
