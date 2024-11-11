@@ -73,9 +73,9 @@ public class World {
 		player.SetRoom(rooms[0]);
 		if(MainMenu.getLevel() == 0) {
 			 // room 0
-			rooms[0].GetEntities().add(new Enemy(3,7, Vector.Up,0,0,Resources.UFO, 0, rooms[0]));
-	    	   rooms[0].GetEntities().add(new Monster(4, 2, Vector.Up, 2, 2, Resources.MONSTER1,Resources.MONSTER_ATTACK, 1, rooms[0], 40, false, 1, 20));
-	    	   rooms[0].GetEntities().add(new Monster(10, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[0], 40, true, 1, 20));
+			//rooms[0].GetEntities().add(new Enemy(3,7, Vector.Up,0,0,Resources.UFO, 0, rooms[0]));
+	    	   //rooms[0].GetEntities().add(new Monster(4, 2, Vector.Up, 2, 2, Resources.MONSTER1,Resources.MONSTER_ATTACK, 1, rooms[0], 40, false, 1, 20));
+	    	   //rooms[0].GetEntities().add(new Monster(10, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[0], 40, true, 1, 20));
 	    	   // room 1
 	    	   //rooms[1].GetEntities().add(new Monster(3, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 2, rooms[1], 10, true, 1, 20));
 	    	   /*rooms[1].GetEntities().add(new AD(12, 3, Vector.Up, 2, 2, Resources.AD, 0, rooms[1], 20, true, 0, 25));
