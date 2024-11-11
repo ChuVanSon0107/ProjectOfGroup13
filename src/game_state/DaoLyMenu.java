@@ -25,7 +25,7 @@ public class DaoLyMenu extends GameState{
 		else if(time >= 100) daoly = "Thù hận sẽ chỉ sinh ra thù hận";
 		else daoly = "Hãy kết thúc mọi thứ trong hòa bình";
 		if(time == 0)
-			gameStateManager.setCurState(3);
+			gameStateManager.setCurState(0);
 	}
 
 	@Override
