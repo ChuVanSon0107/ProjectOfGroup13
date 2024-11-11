@@ -55,6 +55,7 @@ public class Resources {
 	    public static final byte UFO = 48;
 	    public static final byte PLANET = 49;
 	    public static final byte UNIVERSE = 50;
+		// GRASS REPLACES FOR WALL 
 	    public static final byte WALL1 = 51;
 	    public static final byte WALL2 = 52;
 	    public static final byte WALL3 = 53;
@@ -110,7 +111,7 @@ public class Resources {
 		public static final byte CAVE5 = 97;
 		public static final byte CAVE6 = 98;
 		
-		// Water
+		// Water speed reduce by 2
 		public static final byte WATER1 = 99;
 		public static final byte WATER2 = 100;
 		public static final byte WATER3 = 101;
@@ -129,11 +130,11 @@ public class Resources {
 		public static final byte WATER16 = 114;
 		public static final byte WATER17 = 115;
 		public static final byte WATER18 = 116;
-	
+
 		//GuidMenu
-		public static final byte GUIDEMENU = 99;
+		public static final byte GUIDEMENU = 117;
 		//StoryMenu
-		public static final byte STORYMENU = 100;
+		public static final byte STORYMENU = 118;
 
 	
 	    public static ArrayList<BufferedImage> TEXTURES = new ArrayList<>();

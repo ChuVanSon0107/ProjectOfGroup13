@@ -125,6 +125,32 @@ public class Loader {
             Resources.TEXTURES.add(Resources.CAVE4,image.getSubimage(16*2, 16*13, 16, 16));
             Resources.TEXTURES.add(Resources.CAVE5,image.getSubimage(16*1, 16*14, 16, 16));
             Resources.TEXTURES.add(Resources.CAVE6,image.getSubimage(16*2, 16*14, 16, 16));
+            
+            // WATER
+            Resources.TEXTURES.add(Resources.WATER1,image.getSubimage(0, 16*8, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER2,image.getSubimage(16*1, 16*8, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER3,image.getSubimage(16*2, 16*8, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER4,image.getSubimage(16*3, 16*8, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER5,image.getSubimage(16*0, 16*9, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER6,image.getSubimage(16*1, 16*9, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER7,image.getSubimage(16*3, 16*9, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER8,image.getSubimage(16*0, 16*10, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER9,image.getSubimage(16*1, 16*10, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER10,image.getSubimage(16*3, 16*10, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER11,image.getSubimage(16*0, 16*11, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER12,image.getSubimage(16*1, 16*11, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER13,image.getSubimage(16*2, 16*11, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER14,image.getSubimage(16*3, 16*11, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER15,image.getSubimage(16*4, 16*6, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER16,image.getSubimage(16*5, 16*6, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER17,image.getSubimage(16*4, 16*7, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER18,image.getSubimage(16*5, 16*7, 16, 16));
+
+
 
             //GUIDEMENU
             Resources.TEXTURES.add(Resources.GUIDEMENU, ImageIO.read(getClass().getResource("/image/guideMenu.jpg")));

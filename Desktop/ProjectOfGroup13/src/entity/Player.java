@@ -177,7 +177,7 @@ public class Player extends Entity{
 		Rectangle rectangle = this.intersection(tile);
 		if(rectangle.isEmpty())return;
 		if(tile.GetProperty() == 2) {
-			speed=1;
+			speed = 3;
 			return;
 		}
 		speed=5;
@@ -206,4 +206,7 @@ public class Player extends Entity{
 	public int getETime() {
 		return ETime;
 	}
+    public float getSpeed() {
+        return speed;
+    } 
 }

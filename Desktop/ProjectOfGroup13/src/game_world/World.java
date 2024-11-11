@@ -14,6 +14,7 @@ public class World {
 	private Room[] rooms;
 	private Player player;
 	private int curRoom = 0;
+	
 	public World(Player player) {
 		System.out.print("Init World\n");
 		
@@ -40,6 +41,28 @@ public class World {
 					{79,84,63,65,64,68,56,57,67,65,64,65,64,66,77,77},
 					{77,78,79,80,77,55,56,57,58,78,79,80,77,78,79,80},
 					}),
+				new Room(new byte[][]{
+					{77,103,104,107,104,105,77,78,79,80,77,79,77,80,77,80},
+					{79,106,104,113,114,115,100,101,100,101,100,101,100,101,102,79},
+					{77,103,104,115,116,104,107,104,107,104,113,114,107,104,105,77},
+					{79,106,107,104,104,104,107,104,107,104,115,116,107,104,105,79},
+					{77,103,104,107,104,113,110,111,110,111,110,111,114,104,105,77},
+					{79,106,104,107,104,108,77,78,79,78,78,99,116,104,108,78},
+					{77,109,110,111,110,112,99,100,101,100,101,116,104,107,105,77},
+					{77,78,79,80,78,77,103,104,107,104,107,113,110,111,112,77},
+					{77,78,79,80,78,77,103,104,107,104,113,112,77,78,79,80},
+				}),
+				new Room(new byte[][] {
+					{77,78,79,80,77,78,77,93,94,78,79,80,77,78,79,80},
+					{78,77,51,53,53,52,54,95,96,51,52,52,53,54,85,86},
+					{79,77,55,57,60,61,58,97,98,55,56,57,60,58,87,88},
+					{80,81,59,57,60,61,69,52,53,70,56,57,60,62,89,90},
+					{78,77,55,57,60,61,56,57,60,61,56,57,60,58,81,77},
+					{79,82,59,57,60,61,56,57,60,61,56,57,60,62,82,77},
+					{80,77,55,57,60,61,56,57,60,61,56,57,60,58,77,77},
+					{79,84,63,65,64,68,56,57,67,65,64,65,64,66,77,77},
+					{77,78,79,80,77,55,56,57,58,78,79,80,77,78,79,80},
+				}),
 	       };
 	       
 		System.out.print("Init World_1\n");
@@ -138,19 +161,30 @@ public class World {
 		int x = (int) player.getX() / 50;
 		int y = (int) player.getY() / 50;
 		//System.out.println(x + " " + y);
-		System.out.println(rooms[curRoom].GetTile(y,x).getID());
-		if (rooms[curRoom].GetTile(y,x).getID() >= 93 &&  rooms[curRoom].GetTile(y,x).GetProperty() <= 98 ) {
+		//System.out.println(player.getSpeed());
+		//System.out.println(rooms[curRoom].GetTile(y,x).getID());
+		System.out.println(player.getPrevPositionX() + " " + player.getPrevPositionY());
+		if ((rooms[curRoom].GetTile(y,x).getID() >= 93 &&  rooms[curRoom].GetTile(y,x).getID() <= 98)
+			|| y <= 0) {
 			curRoom++;
+			player.savePrevPosition(x, y + 1);
 			if(curRoom==count) {	
 				return;
 			}
-			player.SetCenterY(Tile.size*Room.Ysize - player.height);
+			switch (curRoom) {
+				case 1: player.setPosition(7*50, 8*50);
+					break;
+				case 2: player.setPosition(7*50, 8*50);
+					break;
+				case 3: player.setPosition(7*50, 8*50);
+					break;
+			}
 			player.SetRoom(rooms[curRoom]);
 			player.GetRPos().SetExistTime(0);
 		}
-		if (player.getCenterY() > rooms[curRoom].GetTile(Room.Ysize-1, 0).y + Tile.size) {
+		else if (player.getCenterY() > rooms[curRoom].GetTile(Room.Ysize-1, 0).y + Tile.size) {
 			curRoom--;
-			player.setPosition(7*50,3*50);
+			player.setPosition(player.getPrevPositionX()*50, player.getPrevPositionY()*50);
 			player.SetRoom(rooms[curRoom]);
 			player.GetRPos().SetExistTime(0);
 		}
