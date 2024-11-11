@@ -249,7 +249,6 @@ import java.awt.event.KeyEvent;
 import conversation.Conversation;
 import entity.Player;
 import game_world.*;
-import main.WindowManager;
 import resources.Resources;
 
 public class PlayingState extends GameState{
@@ -270,11 +269,15 @@ public class PlayingState extends GameState{
 
 		this.inConversation = true;
 		String[] sentences = new String[]{
-			"Ta đã từng nương tay cho các ngươi một con đường sống",
-			"Nhưng các ngươi không biết trân trọng cơ hội khiến hôm nay ta phải diệt cỏ tận gốc",
-			"Pháp sư song hệ tiêu diệt hết phe Hắc ám và cứu được con gái mình trả lại bình yên cho Hành tinh Closeup mãi mãi về sau."
+			"Ta đã từng tha cho các ngươi một mạng",
+			"Vậy mà còn không biết hối lỗi hả?",
+			"Hôm nay ta sẽ diệt trừ tận gốc",
+			"Cứu lấy con gái của ta",
+			"Đem lại hòa bình cho hành tinh Closeup"
 		};
 		byte[] imgIDs = new byte[] {
+				Resources.PLAYER,
+				Resources.PLAYER,
 				Resources.PLAYER,
 				Resources.PLAYER,
 				Resources.PLAYER
@@ -297,7 +300,7 @@ public class PlayingState extends GameState{
 							"Huhuuu Cha ơi, con sợ lắm ạ.",
 							"May mà có cha đến cứu con, con sợ lắm.",
 							"Thôi về nhà thôi con",
-							"Chúng ta cùng nhau xây dựng hành tinh Closeup nào!!"
+							"Cùng nhau xây dựng hành tinh Closeup nào!!"
 						};
 
 						byte[] imgIDs = new byte[] {
