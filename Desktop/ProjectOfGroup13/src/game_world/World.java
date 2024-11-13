@@ -52,6 +52,17 @@ public class World {
 					{77,78,79,80,78,77,103,104,107,104,107,113,110,111,112,77},
 					{77,78,79,80,78,77,103,104,107,104,113,112,77,78,79,80},
 				}),
+				new Room(new int[][]{
+					{77,78,77,79,77,78,77,79,77,78,77,79,55,58,77,79},
+					{77,78,51,52,53,52,53,52,52,54,85,86,59,62,77,79},
+					{77,78,55,67,64,65,68,56,57,58,87,88,55,58,77,84},
+					{77,78,59,58,77,78,55,67,64,66,89,90,59,62,78,80},
+					{77,80,55,62,79,80,59,62,77,78,79,80,55,58,79,80},
+					{79,80,63,69,54,79,55,69,52,54,77,78,59,62,78,79},
+					{82,78,51,56,58,77,63,64,68,69,52,53,70,58,80,78},
+					{77,51,70,56,62,77,78,79,63,64,65,65,64,66,77,78},
+					{78,55,56,67,77,78,79,83,78,79,77,78,79,84,78,79},
+				}),
 				new Room(new int[][] {
 					{77,78,79,80,77,117,118,119,118,119,118,120,77,78,79,80},
 					{77,78,79,80,77,121,81,51,52,54,81,122,78,78,79,80},
@@ -73,7 +84,7 @@ public class World {
 		player.SetRoom(rooms[0]);
 		if(MainMenu.getLevel() == 0) {
 			// Adding princes
-			rooms[3].GetEntities().add(new Enemy(8, 2, Vector.Up,0 , 0, Resources.PRINCESS1,0, rooms[3]));
+			rooms[4].GetEntities().add(new Enemy(8, 2, Vector.Up,0 , 0, Resources.PRINCESS1,0, rooms[3]));
 			 // room 0
 			//rooms[0].GetEntities().add(new Enemy(3,7, Vector.Up,0,0,Resources.UFO, 0, rooms[0]));
 	    	   //rooms[0].GetEntities().add(new Monster(4, 2, Vector.Up, 2, 2, Resources.MONSTER1,Resources.MONSTER_ATTACK, 1, rooms[0], 40, false, 1, 20));
@@ -179,8 +190,9 @@ public class World {
 					break;
 				case 2: player.setPosition(7*50, 8*50);
 					break;
-				case 3: player.setPosition(7*50, 8*50);
+				case 3: player.setPosition(2*50, 8*50);
 					break;
+				case 4: player.setPosition(7*50, 8*50);
 			}
 			player.SetRoom(rooms[curRoom]);
 			player.GetRPos().SetExistTime(0);
