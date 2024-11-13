@@ -165,7 +165,7 @@ public class World {
 		//System.out.println(rooms[curRoom].GetTile(y,x).getID());
 		System.out.println(player.getPrevPositionX() + " " + player.getPrevPositionY());
 		if ((rooms[curRoom].GetTile(y,x).getID() >= 93 &&  rooms[curRoom].GetTile(y,x).getID() <= 98)
-			|| y <= 0) {
+			|| player.getCenterY() < rooms[curRoom].GetTile(0, 0).y) {
 			curRoom++;
 			player.savePrevPosition(x, y + 1);
 			if(curRoom==count) {	
