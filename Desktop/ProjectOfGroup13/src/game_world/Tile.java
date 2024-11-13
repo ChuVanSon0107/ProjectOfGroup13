@@ -9,13 +9,13 @@ public class Tile extends Rectangle{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private byte id;
+	private int id;
 	public static final int size = 50;
 	private byte prop;
 	// 0: None
 	// 1: Wall
 	// 2: Water
-	public Tile(byte id,int x,int y) {
+	public Tile(int id,int x,int y) {
 		super(x * size, y * size, size, size);
 		this.id = id;
 		// prop = 0 -> pass
@@ -33,7 +33,7 @@ public class Tile extends Rectangle{
 	public byte GetProperty() {
 		return prop;
 	}
-	public byte getID() {
+	public int getID() {
 		return id;
 	}
 }

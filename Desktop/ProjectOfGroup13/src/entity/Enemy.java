@@ -11,7 +11,7 @@ public class Enemy extends Entity{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public Enemy(int x, int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed, Room room) {
+	public Enemy(int x, int y,Vector facing, int delayTime, int frameCount, int imgID, float speed, Room room) {
 		super(x,y,facing, delayTime, frameCount, imgID, speed);
 		// TODO Auto-generated constructor stub
 		this.room= room;
