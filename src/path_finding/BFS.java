@@ -10,6 +10,8 @@ public class BFS {
 	public BFS(Tile[][] tiles) {
 		System.out.println(tiles.length + "---" + tiles[0].length);
 		this.tiles = new Tile[tiles.length][tiles[0].length];
+		for(int i = 0; i < tiles.length; i++) {
+			for(int j = 0; j < tiles[i].length; j++) {
 		for(int i = 0;i< tiles.length;i++) {
 			for(int j=0;j<tiles[i].length;j++) {
 				this.tiles[i][j] = tiles[i][j];
@@ -17,10 +19,14 @@ public class BFS {
 		}
 	}
 	public Vector FindNextNode(int sx, int sy, int tx, int ty) {
+		if(sx == tx && sy == ty) return new Vector(0,0);
 		if(sx==tx && sy==ty) return new Vector(0,0);
 		
 		boolean[][] visit = new boolean[tiles.length][tiles[0].length];
 		
+		for(int i = 0; i < tiles.length; i++) {
+			for(int j = 0; j < tiles[0].length; j++) {
+				visit[i][j] = false;
 		for(int i=0;i<tiles.length;i++) {
 			for(int j=0;j<tiles[0].length;j++) {
 				visit[i][j]=false;
@@ -36,9 +42,15 @@ public class BFS {
 		
 		while(queue.size()>0) {
 			Tile curTile = queue.remove();
+			curx = curTile.y / Tile.size;
+			cury = curTile.x / Tile.size;
 			curx = curTile.y/Tile.size;
 			cury = curTile.x/Tile.size;
 			
+			if(curx > 0) {
+				if(!visit[curx - 1][cury] && tiles[curx - 1][cury].GetProperty() != 1) {
+					visit[curx - 1][cury] = true;
+					if(curx - 1 == sx && cury == sy) {
 			if(curx>0) {
 				if(!visit[curx-1][cury] && tiles[curx-1][cury].GetProperty()!=1) {
 					visit[curx-1][cury]= true;
@@ -47,9 +59,14 @@ public class BFS {
 						return Vector.Down;
 					}
 					
+					queue.add(tiles[curx - 1][cury]);
 					queue.add(tiles[curx-1][cury]);
 				}
 			}
+			if(curx < tiles.length - 1) {
+				if(!visit[curx + 1][cury] && tiles[curx + 1][cury].GetProperty() != 1) {
+					visit[curx + 1][cury] = true;
+					if(curx + 1==sx && cury == sy) {
 			if(curx<tiles.length-1) {
 				if(!visit[curx+1][cury] && tiles[curx+1][cury].GetProperty()!=1) {
 					visit[curx+1][cury]= true;
@@ -57,9 +74,14 @@ public class BFS {
 						System.out.println("o");
 						return Vector.Up;
 					}
+					queue.add(tiles[curx + 1][cury]);
 					queue.add(tiles[curx+1][cury]);
 				}
 			}
+			if(cury > 0) {
+				if(!visit[curx][cury - 1] && tiles[curx][cury - 1].GetProperty() != 1) {
+					visit[curx][cury - 1]= true;
+					if(curx == sx && cury - 1 == sy) {
 			if(cury>0) {
 				if(!visit[curx][cury-1] && tiles[curx][cury-1].GetProperty()!=1) {
 					visit[curx][cury-1]= true;
@@ -67,9 +89,14 @@ public class BFS {
 						System.out.println("o");
 						return Vector.Right;
 					}
+					queue.add(tiles[curx][cury - 1]);
 					queue.add(tiles[curx][cury-1]);
 				}
 			}
+			if(cury<tiles[0].length - 1) {
+				if(!visit[curx][cury + 1] && tiles[curx][cury + 1].GetProperty() != 1) {
+					visit[curx][cury + 1] = true;
+					if(curx == sx && cury + 1 == sy) {
 			if(cury<tiles[0].length-1) {
 				if(!visit[curx][cury+1] && tiles[curx][cury+1].GetProperty()!=1) {
 					visit[curx][cury+1]= true;
@@ -77,6 +104,7 @@ public class BFS {
 						System.out.println("o");
 						return Vector.Left;
 					}
+					queue.add(tiles[curx][cury + 1]);
 					queue.add(tiles[curx][cury+1]);
 				}
 			}
