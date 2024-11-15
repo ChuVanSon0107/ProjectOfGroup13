@@ -18,15 +18,15 @@ public class Room {
 	public void SetPlayer(Player player) {
 		this.player = player;
 	}
-	public Room(byte [][] ids) {
+	public Room(int[][] ids) {
 
-		tiles = new Tile[Ysize][Xsize];
+		tiles= new Tile[Ysize][Xsize];
 		
 		entities = new ArrayList<Enemy>();
 		
-		for(int i = 0; i < Ysize; i++){
-			for(int j = 0; j < Xsize; j++) {
-		        tiles[i][j] = new Tile(ids[i][j], j, i);
+		for(int i=0;i<Ysize;i++){
+			for(int j=0;j<Xsize;j++) {
+		        tiles[i][j] = new Tile(ids[i][j],j,i);
 			}
 		}
 	}
@@ -36,12 +36,12 @@ public class Room {
 	
 	public void Render(Graphics g) {
 		
-		for(int i = 0; i < Ysize ; i++) {
-			for(int j = 0; j < Xsize; j++) {
+		for(int i=0;i<Ysize;i++) {
+			for(int j=0;j<Xsize;j++) {
 				g.drawImage(Resources.TEXTURES.get(tiles[i][j].getID()), tiles[i][j].x, tiles[i][j].y, tiles[i][j].width, tiles[i][j].height, null);
 			}
 		}
-		for(Enemy entity : entities) {
+		for(Enemy entity: entities) {
 			if(entity.GetAlive())
 			entity.Render(g);
 	
@@ -49,9 +49,8 @@ public class Room {
 	}
 	public void Loop() {
 		for(Enemy enemy : entities) {
-			if(enemy.GetAlive()){
-			 	enemy.OnLoop();
-			}
+			if(enemy.GetAlive())
+			enemy.OnLoop();
 			
 		}
 	}

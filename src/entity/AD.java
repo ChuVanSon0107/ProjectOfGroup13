@@ -13,7 +13,7 @@ public class AD extends Monster{
 
 	public AD(int x, int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed, Room room, int hp, boolean freeze, int damage, int attackTime) {
 		super(x,y,facing, delayTime, frameCount, imgID, (byte)0, speed, room, hp, freeze, damage, attackTime);
-
+		// TODO Auto-generated constructor stub
 		b= new Bullet(this.x, this.y, this.facing, 20, 1, Resources.BULLET, 5, room, 2);
 		m = new Missile(this.x, this.y, this.facing, 20, 1, Resources.MISSILE, 5,  room, 2);
 		b.SetAlive(false);

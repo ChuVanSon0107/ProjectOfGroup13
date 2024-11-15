@@ -7,20 +7,17 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 
-public class PauseMenu extends GameState {
+public class PauseMenu extends MainMenu{
 
-	private static final String CONTINUE_GAME = "CONTINUE";
-	private static final String QUIT_GAME = "QUIT";
+	private static final String CONTINUE_GAME = "Continue";
+	private static final String QUIT_GAME = "Quit";
 	private static final String LABEL = "PAUSE";
-	private String[] optionsMenu = {};
-	private int selected;
-
+	protected int selected;
 	public PauseMenu(GameStateManager gameStateManager){
 		super(gameStateManager);
-		this.optionsMenu = new String[]{ CONTINUE_GAME, QUIT_GAME};
+		super.optionsMenu = new String[]{ CONTINUE_GAME, QUIT_GAME};
 		this.selected = 0;
 	}
-
 	@Override
 	public void Loop() {
 		
@@ -33,17 +30,17 @@ public class PauseMenu extends GameState {
 		
 		graphics.setFont(new Font("Arial", Font.BOLD, 40));
 		graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON), 0, 0, 800, 200, null);
-		graphics.setColor(Color.BLACK);
-		graphics.drawString(LABEL, 340, 120);
+		graphics.setColor(Color.WHITE);
+		graphics.drawString(LABEL, WindowManager.WIDTH/2 - 115, WindowManager.HEIGHT/5);
 		for (int i = 0; i < this.optionsMenu.length; i++) {
 			graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON_1), 0, 180 + 80 * i, 400, 80, null);
-			if(i == this.selected) {
+			if(i==this.selected) {
 				graphics.setColor(Color.BLACK);
 				graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON_1), 0, 180 + 80 * i, 500, 80, null);
 			}
 			else graphics.setColor(Color.WHITE);
 			
-			graphics.drawString(this.optionsMenu[i], 50, 235 + i * 80);
+			graphics.drawString(this.optionsMenu[i], 10, 235 + i * 80);
 		}
 	}
 	@Override
@@ -59,7 +56,7 @@ public class PauseMenu extends GameState {
 			case KeyEvent.VK_ENTER:
 				switch (this.optionsMenu[selected]){
 					case CONTINUE_GAME:
-						gameStateManager.setCurState(3);
+						gameStateManager.setCurState(1);
 						System.out.print("Continue\n");
 						break;
 					case QUIT_GAME:

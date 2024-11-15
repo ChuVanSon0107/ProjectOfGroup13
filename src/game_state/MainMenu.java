@@ -80,8 +80,8 @@ public class MainMenu extends GameState{
 					case START_GAME:
 						// gameStateManager.setGameStates(5, new IntroMenu(gameStateManager));
 						// gameStateManager.setCurState(5);
-						gameStateManager.setGameStates(1, new StoryMenu(gameStateManager));
-						gameStateManager.setCurState(1);
+						gameStateManager.setGameStates(6, new GuideMenu(gameStateManager));
+						gameStateManager.setCurState(6);
 
 
 						break;

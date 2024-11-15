@@ -11,15 +11,15 @@ import resources.Resources;
 public class Player extends Entity{
 	public Player(int x,int y,int delayTime, int frameCount, byte imgID, float speed) {
 		super(x,y,Vector.Up, delayTime, frameCount, imgID, speed);
-		//hp = 20;
-		hp = 100;
+		// TODO Auto-generated constructor stub
+		hp = 20;
 		mp = 30;
 		def = 0;
 		QTime = 0;
 		RTime = 0;
 		ETime = 0;
-		freezeTime = 0;
-		damTime = 0;
+		freezeTime=0;
+		damTime=0;
 		q = new QSkill(0,0,Vector.Up, 1,1,Resources.Q,0);
 		r = new RSkill(0,0,Vector.Up, 10,1,Resources.R,10);
 		e = new ESkill(0,0,Vector.Up,10,1,Resources.E,10);
@@ -41,7 +41,8 @@ public class Player extends Entity{
 	private boolean move = false;
 	public void Move() {
 		if(move) {
-	
+			
+			
 		super.x = (int)(super.x + facing.x * speed);
 		super.y = (int)(super.y + facing.y * speed);
 		}
@@ -49,29 +50,29 @@ public class Player extends Entity{
 	@Override
 	public void DecreaseTime() {
 		
-		if(QTime > 0) QTime--;
-		if(RTime > 0) RTime--;
-		if(ETime > 0) ETime--;
-		if(freezeTime > 0) freezeTime--;
-		if(damTime > 0) damTime--;// thời gian giữa 2 lần bị trừ máu
+		if(QTime>0)QTime--;
+		if(RTime>0)RTime--;
+		if(ETime>0) ETime--;
+		if(freezeTime>0)freezeTime--;
+		if(damTime>0)damTime--;// thời gian giữa 2 lần bị trừ máu
 		
 	}
 	public void AttackQ() {
-		if(QTime == 0) { 
+		if(QTime==0) { 
 			
-			QTime = 10;
-			q.SetExistTime(5);// thời gian tồn tại trên màn hình(10 vòng lặp)
-			q.SetTransform(new Vector(this.x + facing.x * this.height, this.y + facing.y * this.width), new Vector(Tile.size,Tile.size));
-			q.SetFacing(this.facing);
+		QTime=10;
+		q.SetExistTime(5);// thời gian tồn tại trên màn hình(10 vòng lặp)
+		q.SetTransform(new Vector(this.x + facing.x*this.height, this.y + facing.y*this.width), new Vector(Tile.size,Tile.size));
+		q.SetFacing(this.facing);
 		}
 	}
 	public void AttackR() {
 		if(mp > 0) {
-		if(RTime == 0) {
-			RTime = 10;
+		if(RTime==0) {
+			RTime=10;
 			mp--;
 			r.SetExistTime(50);
-			r.SetTransform(new Vector(this.x + facing.x * this.height, this.y + facing.y * this.width), new Vector(Tile.size,Tile.size));
+			r.SetTransform(new Vector(this.x + facing.x*this.height, this.y + facing.y*this.width), new Vector(Tile.size,Tile.size));
 			r.SetFacing(this.facing);// = hướng của player
 		}
 		}
@@ -80,11 +81,11 @@ public class Player extends Entity{
 	}
 	public void AttackE() {
 		if(mp > 0) {
-		if(ETime == 0) {
-			ETime = 10;
+		if(ETime==0) {
+			ETime=10;
 			mp--;
 			e.SetExistTime(50);
-			e.SetTransform(new Vector(this.x + facing.x * this.height, this.y + facing.y * this.width), new Vector(Tile.size,Tile.size));
+			e.SetTransform(new Vector(this.x + facing.x*this.height, this.y + facing.y*this.width), new Vector(Tile.size,Tile.size));
 			e.SetFacing(this.facing);// = hướng của player
 		}
 		}
@@ -93,8 +94,7 @@ public class Player extends Entity{
 	}
 	public QSkill GetQPos() {
 		return q;
-	}
-	public RSkill GetRPos() {
+	}public RSkill GetRPos() {
 		return r;
 	}
 	public ESkill GetEPos() {
@@ -102,16 +102,16 @@ public class Player extends Entity{
 	}
 	
 	public void TakeHP(int amount) {
-		if(amount > 0) {
-			this.hp += amount;
+		if(amount>0) {
+		this.hp+=amount;
 		}
 		else {
 			damTime = 30;
-			if(def > 0) {
-				hp += amount/def;
+			if(def>0) {
+				hp+=amount/def;
 				def--;
 			}
-			else hp += amount;
+			else hp+=amount;
 			
 		
 			if(hp < 0) {
@@ -119,30 +119,28 @@ public class Player extends Entity{
 			}
 		}
 	}public void TakeMP(int amount) {
-		this.mp += amount;
-		if(mp < 0) {
-			mp = 0;
+		this.mp+=amount;
+		if(mp<0) {
+			mp=0;
 		}
 	}public void TakeDef(int amount) {
-		this.def += amount;
-		if(def < 0) {
-			def = 0;
+		this.def+=amount;
+		if(def<0) {
+			def=0;
 		}
 	}
 	public void OnLoop() {
-		if(move){
-			AnimationDisplay();
-		}
+		if(move)
+		AnimationDisplay();
 		DecreaseTime();
-
-		for(int i = 0; i < Room.Ysize; i++) {
-			for(int j = 0; j < Room.Xsize; j++) {
+		for(int i=0;i<Room.Ysize;i++) {
+			for(int j=0;j<Room.Xsize;j++) {
 				super.CollisionWall(room.GetTile(i, j));
 				CollisionWater(room.GetTile(i, j));
 			}
 		}
-		if(freezeTime == 0) {
-			frameCount = 2;
+		if(freezeTime==0) {
+			frameCount=2;
 			Move();	
 		}
 		q.OnLoop();
@@ -150,19 +148,16 @@ public class Player extends Entity{
 		e.OnLoop();
 	}
 	public void Render(Graphics g) {
-		if(freezeTime == 0) {
-			if(facing.Equals(Vector.Up)) {
-				imgID = Resources.PLAYER_BACK;
-			}
-			else if(facing.Equals(Vector.Down)) {
-				imgID = Resources.PLAYER;
-			}
-			else if(facing.Equals(Vector.Left)) {
-				imgID = Resources.PLAYER_LEFT;
-			}
-			else if(facing.Equals(Vector.Right)) {
-				imgID = Resources.PLAYER_RIGHT;
-			}
+		if(freezeTime==0) {
+		if(facing.Equals(Vector.Up)) {
+			imgID = Resources.PLAYER_BACK;
+		}else if(facing.Equals(Vector.Down)) {
+			imgID = Resources.PLAYER;
+		}else if(facing.Equals(Vector.Left)) {
+			imgID = Resources.PLAYER_LEFT;
+		}else if(facing.Equals(Vector.Right)) {
+			imgID = Resources.PLAYER_RIGHT;
+		}
 		}	
 		super.Render(g);
 		if(damTime > 0) g.drawImage(Resources.TEXTURES.get(Resources.BLOOD), this.x, this.y, Tile.size, Tile.size, null);
@@ -171,27 +166,27 @@ public class Player extends Entity{
 		e.Render(g);
 	}
 	public void SetRoom(Room room) {
-		this.room = room;
+		this.room=room;
 	}
 	public void SetFreezeTime(int time) {
-		freezeTime = time;
+		freezeTime=time;
 		imgID = Resources.PLAYER_ICE;
 		frameCount = 1;
 	}
 	public void CollisionWater(Tile tile) {
 		Rectangle rectangle = this.intersection(tile);
-		if(rectangle.isEmpty()) return;
+		if(rectangle.isEmpty())return;
 		if(tile.GetProperty() == 2) {
-			speed = 1;
+			speed = 3;
 			return;
 		}
-		speed = 5;
+		speed=5;
 	}
 	public Vector GetFacing() {
 		return facing;
 	}
 	public void SetMove(boolean move) {
-		this.move = move;
+		this.move=move;
 	}
 	public int getHp() {
 		return hp;
@@ -211,4 +206,7 @@ public class Player extends Entity{
 	public int getETime() {
 		return ETime;
 	}
+    public float getSpeed() {
+        return speed;
+    } 
 }
