@@ -18,7 +18,7 @@ public class Room {
 	public void SetPlayer(Player player) {
 		this.player = player;
 	}
-	public Room(byte [][] ids) {
+	public Room(int[][] ids) {
 
 		tiles = new Tile[Ysize][Xsize];
 		

@@ -1,6 +1,8 @@
 package resources;
 
 
+import java.awt.image.BufferedImage;
+
 //import java.io.File;
 
 
@@ -9,6 +11,8 @@ import javax.imageio.ImageIO;
 public class Loader {
 	public void load(){
         try {  
+            BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
+
         	Resources.TEXTURES.add(Resources.TILE, ImageIO.read(getClass().getResource("/image/title.png")));
     		Resources.TEXTURES.add(Resources.WALL, ImageIO.read(getClass().getResource("/image/wall.png")));
     		Resources.TEXTURES.add(Resources.WATER, ImageIO.read(getClass().getResource("/image/water.png")));
@@ -68,39 +72,98 @@ public class Loader {
             Resources.TEXTURES.add(Resources.UFO, ImageIO.read(getClass().getResource("/image/ufo.png")));
             Resources.TEXTURES.add(Resources.PLANET, ImageIO.read(getClass().getResource("/image/planet.png")));
             Resources.TEXTURES.add(Resources.UNIVERSE, ImageIO.read(getClass().getResource("/image/universe.jpg")));
-            Resources.TEXTURES.add(Resources.WALL1, ImageIO.read(getClass().getResource("/image/wall1.png")));
-            Resources.TEXTURES.add(Resources.WALL2, ImageIO.read(getClass().getResource("/image/wall2.png")));
-            Resources.TEXTURES.add(Resources.WALL3, ImageIO.read(getClass().getResource("/image/wall3.png")));
-            Resources.TEXTURES.add(Resources.WALL4, ImageIO.read(getClass().getResource("/image/wall4.png")));
-            Resources.TEXTURES.add(Resources.WALL5, ImageIO.read(getClass().getResource("/image/wall5.png")));
-            Resources.TEXTURES.add(Resources.WALL6, ImageIO.read(getClass().getResource("/image/wall6.png")));
-            Resources.TEXTURES.add(Resources.WALL7, ImageIO.read(getClass().getResource("/image/wall7.png")));
-            Resources.TEXTURES.add(Resources.WALL8, ImageIO.read(getClass().getResource("/image/wall8.png")));
-            Resources.TEXTURES.add(Resources.WALL9, ImageIO.read(getClass().getResource("/image/wall9.png")));
-            Resources.TEXTURES.add(Resources.WALL10, ImageIO.read(getClass().getResource("/image/wall10.png")));
-            Resources.TEXTURES.add(Resources.WALL11, ImageIO.read(getClass().getResource("/image/wall11.png")));
-            Resources.TEXTURES.add(Resources.WALL12, ImageIO.read(getClass().getResource("/image/wall12.png")));
-            Resources.TEXTURES.add(Resources.WALL13, ImageIO.read(getClass().getResource("/image/wall13.png")));
-            Resources.TEXTURES.add(Resources.WALL14, ImageIO.read(getClass().getResource("/image/wall14.png")));
-            Resources.TEXTURES.add(Resources.WALL15, ImageIO.read(getClass().getResource("/image/wall15.png")));
-            Resources.TEXTURES.add(Resources.WALL16, ImageIO.read(getClass().getResource("/image/wall16.png")));
-            Resources.TEXTURES.add(Resources.WALL17, ImageIO.read(getClass().getResource("/image/wall17.png")));
-            Resources.TEXTURES.add(Resources.WALL18, ImageIO.read(getClass().getResource("/image/wall18.png")));
-            Resources.TEXTURES.add(Resources.WALL19, ImageIO.read(getClass().getResource("/image/wall19.png")));
-            Resources.TEXTURES.add(Resources.WALL20, ImageIO.read(getClass().getResource("/image/wall20.png")));
-            Resources.TEXTURES.add(Resources.WALL21, ImageIO.read(getClass().getResource("/image/wall21.png")));
+            
+            Resources.TEXTURES.add(Resources.WALL1, image.getSubimage(16*0,16*0,16,16));
+            Resources.TEXTURES.add(Resources.WALL2, image.getSubimage(16*1, 16*0, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL3, image.getSubimage(16*2, 16*0, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL4, image.getSubimage(16*3, 16*0, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL5, image.getSubimage(16*0, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL6, image.getSubimage(16*1, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL7, image.getSubimage(16*2, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL8, image.getSubimage(16*3, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL9, image.getSubimage(16*0, 16*2, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL10, image.getSubimage(16*1, 16*2, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL11, image.getSubimage(16*2, 16*2, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL12, image.getSubimage(16*3, 16*2, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL13, image.getSubimage(16*0, 16*3, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL14, image.getSubimage(16*1, 16*3, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL15, image.getSubimage(16*2, 16*3, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL16, image.getSubimage(16*3, 16*3, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL17, image.getSubimage(16*4, 16*0, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL18, image.getSubimage(16*5, 16*0, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL19, image.getSubimage(16*4, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL20,image.getSubimage(16*5, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.WALL21,image.getSubimage(16*3, 16*4, 16, 16));
             Resources.TEXTURES.add(Resources.BLOOD_FALL, ImageIO.read(getClass().getResource("/image/blood_fall.png")));
             Resources.TEXTURES.add(Resources.MONSTER1, ImageIO.read(getClass().getResource("/image/Monster1.png")));
             Resources.TEXTURES.add(Resources.MONSTER1_2, ImageIO.read(getClass().getResource("/image/Monster1_2.png")));
             Resources.TEXTURES.add(Resources.MONSTER1_ATTACK, ImageIO.read(getClass().getResource("/image/Monster1_attack.png")));
             Resources.TEXTURES.add(Resources.E, ImageIO.read(getClass().getResource("/image/E.png")));
 
+            Resources.TEXTURES.add(Resources.GRASS1,image.getSubimage(16*1, 16*5, 16, 16));
+            Resources.TEXTURES.add(Resources.GRASS2,image.getSubimage(16*2, 16*5, 16, 16));
+            Resources.TEXTURES.add(Resources.GRASS3,image.getSubimage(16*1, 16*6, 16, 16));
+            Resources.TEXTURES.add(Resources.GRASS4,image.getSubimage(16*2, 16*6, 16, 16));
 
+            Resources.TEXTURES.add(Resources.FLOWER1,image.getSubimage(16*10, 16*5, 16, 16));
+            Resources.TEXTURES.add(Resources.FLOWER2,image.getSubimage(16*8, 16*6, 16, 16));
+            Resources.TEXTURES.add(Resources.FLOWER3,image.getSubimage(16*9, 16*6, 16, 16));
+            Resources.TEXTURES.add(Resources.FLOWER4,image.getSubimage(16*10, 16*6, 16, 16));
+
+            
+            Resources.TEXTURES.add(Resources.TREE1,image.getSubimage(16*6, 16*0, 16, 16));
+            Resources.TEXTURES.add(Resources.TREE2,image.getSubimage(16*7, 16*0, 16, 16));
+            Resources.TEXTURES.add(Resources.TREE3,image.getSubimage(16*6, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.TREE4,image.getSubimage(16*7, 16*1, 16, 16));
+            Resources.TEXTURES.add(Resources.TREE5,image.getSubimage(16*6, 16*2, 16, 16));
+            Resources.TEXTURES.add(Resources.TREE6,image.getSubimage(16*7, 16*2, 16, 16));
+            
+            Resources.TEXTURES.add(Resources.HOLE1,image.getSubimage(16*8, 16*2, 16, 16));
+            Resources.TEXTURES.add(Resources.HOLE2,image.getSubimage(16*9, 16*2, 16, 16));
+            
+            Resources.TEXTURES.add(Resources.CAVE1,image.getSubimage(16*1, 16*12, 16, 16));
+            Resources.TEXTURES.add(Resources.CAVE2,image.getSubimage(16*2, 16*12, 16, 16));
+            Resources.TEXTURES.add(Resources.CAVE3,image.getSubimage(16*1, 16*13, 16, 16));
+            Resources.TEXTURES.add(Resources.CAVE4,image.getSubimage(16*2, 16*13, 16, 16));
+            Resources.TEXTURES.add(Resources.CAVE5,image.getSubimage(16*1, 16*14, 16, 16));
+            Resources.TEXTURES.add(Resources.CAVE6,image.getSubimage(16*2, 16*14, 16, 16));
+            
+            // WATER
+            Resources.TEXTURES.add(Resources.WATER1,image.getSubimage(0, 16*8, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER2,image.getSubimage(16*1, 16*8, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER3,image.getSubimage(16*2, 16*8, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER4,image.getSubimage(16*3, 16*8, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER5,image.getSubimage(16*0, 16*9, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER6,image.getSubimage(16*1, 16*9, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER7,image.getSubimage(16*3, 16*9, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER8,image.getSubimage(16*0, 16*10, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER9,image.getSubimage(16*1, 16*10, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER10,image.getSubimage(16*3, 16*10, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER11,image.getSubimage(16*0, 16*11, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER12,image.getSubimage(16*1, 16*11, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER13,image.getSubimage(16*2, 16*11, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER14,image.getSubimage(16*3, 16*11, 16, 16));
+
+            Resources.TEXTURES.add(Resources.WATER15,image.getSubimage(16*4, 16*6, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER16,image.getSubimage(16*5, 16*6, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER17,image.getSubimage(16*4, 16*7, 16, 16));
+            Resources.TEXTURES.add(Resources.WATER18,image.getSubimage(16*5, 16*7, 16, 16));
+            // GATE
+            for(int i = 4;i < 8;i++){
+                for(int j = 0;j < 4;j++){
+                    if((i == 5 || i == 6) && (j == 1 || j == 2)) continue;
+                    Resources.TEXTURES.add(image.getSubimage(16*j, 16*i, 16, 16));
+                }
+            }
             //GUIDEMENU
             Resources.TEXTURES.add(Resources.GUIDEMENU, ImageIO.read(getClass().getResource("/image/guideMenu.jpg")));
 
             //STORYMENU
             Resources.TEXTURES.add(Resources.STORYMENU, ImageIO.read(getClass().getResource("/image/storyMenu.jpg")));
+
 
 
         }catch (Exception e) {

@@ -17,6 +17,8 @@ public class Entity extends Rectangle{
 	protected byte imgID;// chỉ đến cái vị trí của cái ảnh trong mảng các ảnh
 	protected float speed;// tốc độ
 	private int curDelayTime;// 1 cái số đếm
+	private int prevPositionX = 999; // Save previous entity's X position when they change to the next room
+	private int prevPositionY = 999; // Save previous entity's Y position when they change to the next room
 	// delaytime = 20s // cố định sẽ không thay đổi
 	// 19 curDe
 	public Entity(int x, int y, Vector facing, int delayTime, int frameCount, byte imgID, float speed) {
@@ -76,5 +78,20 @@ public class Entity extends Rectangle{
 			curFrame = (curFrame + 1) % frameCount;
 			curDelayTime = delayTime;
 		}
+	}
+	public void setPosition(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	public void savePrevPosition(int x,int y){
+		this.prevPositionX = x;
+		this.prevPositionY = y;
+	}
+	public int getPrevPositionX(){
+		return prevPositionX;
+	}
+	public int getPrevPositionY(){
+
+		return prevPositionY;
 	}
 }
