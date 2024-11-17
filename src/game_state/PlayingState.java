@@ -306,7 +306,7 @@ public class PlayingState extends GameState{
 						byte[] imgIDs = new byte[] {
 							Resources.PLAYER,
 							Resources.PLAYER,
-							Resources.PLAYER,
+Resources.PLAYER,
 							Resources.PLAYER,
 							Resources.PLAYER,
 							Resources.PLAYER,
@@ -419,7 +419,7 @@ public class PlayingState extends GameState{
 		case KeyEvent.VK_P:	
 			gameStateManager.setCurState(4);
 			break;
-		case KeyEvent.VK_ENTER:
+case KeyEvent.VK_ENTER:
 			if(this.inConversation) {
 				if(conversation != null) conversation.ChangeSentence();
 			}
