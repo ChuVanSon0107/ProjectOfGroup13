@@ -268,6 +268,7 @@ public class PlayingState extends GameState{
 
 
 		this.inConversation = true;
+
 		String[] sentences = new String[]{
 			"Ta đã từng tha cho các ngươi một mạng",
 			"Vậy mà còn không biết hối lỗi hả?",
@@ -419,7 +420,7 @@ public class PlayingState extends GameState{
 		case KeyEvent.VK_P:	
 			gameStateManager.setCurState(4);
 			break;
-case KeyEvent.VK_ENTER:
+		case KeyEvent.VK_ENTER:
 			if(this.inConversation) {
 				if(conversation != null) conversation.ChangeSentence();
 			}

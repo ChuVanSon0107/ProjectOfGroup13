@@ -27,6 +27,7 @@ public class GameStateManager {
 			new GameOverMenu(this),
 			new DaoLyMenu(this)
 		};
+		
 		curState = 0;
 	}
 	public void Loop() {
