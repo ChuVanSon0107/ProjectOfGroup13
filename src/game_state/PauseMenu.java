@@ -60,7 +60,6 @@ public class PauseMenu extends MainMenu{
 						System.out.print("Continue\n");
 						break;
 					case QUIT_GAME:
-						gameStateManager.blood_fall = 0;
 						gameStateManager.setCurState(0);
 						System.out.print("BackToMenu");
 						break;
