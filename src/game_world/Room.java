@@ -20,7 +20,7 @@ public class Room {
 	}
 	public Room(int[][] ids) {
 
-		tiles= new Tile[Ysize][Xsize];
+		tiles = new Tile[Ysize][Xsize];
 		
 		entities = new ArrayList<Enemy>();
 		

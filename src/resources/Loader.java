@@ -158,10 +158,10 @@ public class Loader {
             Resources.TEXTURES.add(Resources.WATER17,image.getSubimage(16*4, 16*7, 16, 16));
             Resources.TEXTURES.add(Resources.WATER18,image.getSubimage(16*5, 16*7, 16, 16));
             // GATE
-            for(int i = 4;i < 8;i++){
+            for(int i = 4; i < 8;i++){
                 for(int j = 0;j < 4;j++){
                     if((i == 5 || i == 6) && (j == 1 || j == 2)) continue;
-                    Resources.TEXTURES.add(image.getSubimage(16*j, 16*i, 16, 16));
+                    Resources.TEXTURES.add(image.getSubimage(16 * j, 16 * i, 16, 16));
                 }
             }
             //GUIDEMENU

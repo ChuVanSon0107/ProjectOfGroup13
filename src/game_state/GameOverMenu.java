@@ -20,6 +20,7 @@ public class GameOverMenu extends GameState{
 		super(gameStateManager);
 		this.gameoverMenu = new String[]{WIN, LOSE};
 		this.optionsMenu = new String[]{RESTART, MAINMENU};
+		result = false;
 		this.selected = 0;
 	}
 
@@ -77,7 +78,6 @@ public class GameOverMenu extends GameState{
 						gameStateManager.setCurState(3);
 						break;
 					case MAINMENU:
-
 						gameStateManager.setCurState(0);
 						break;
 				}

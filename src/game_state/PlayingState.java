@@ -289,7 +289,7 @@ public class PlayingState extends GameState{
 			//meet my princess when defeat all of the monsters and enemies
 			if(world.GetCur() == World.count - 1){	
 				if(GameOverMenu.result == false){
-					if(player.x <= 20 * Tile.size){
+					if(true){
 						this.inConversation = true;
 						String[] sentences = new String[]{
 							"Ôi con gái của ta, ta đến cứu con đây",
