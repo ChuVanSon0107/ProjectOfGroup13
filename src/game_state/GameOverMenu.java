@@ -76,6 +76,7 @@ public class GameOverMenu extends GameState{
 						gameStateManager.setCurState(3);
 						break;
 					case MAINMENU:
+
 						gameStateManager.setCurState(0);
 						break;
 				}
