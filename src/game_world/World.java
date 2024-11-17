@@ -10,7 +10,7 @@ import game_state.MainMenu;
 import resources.Resources;
 
 public class World {
-	public static final int count = 6;
+	public static final int count = 5;
 	private Room[] rooms;
 	private Player player;
 	private int curRoom = 0;
@@ -183,7 +183,7 @@ public class World {
 			|| player.getCenterY() < rooms[curRoom].GetTile(0, 0).y) {
 			curRoom++;
 			player.savePrevPosition(x, y + 1);
-			if(curRoom==count) {	
+			if(curRoom == count) {	
 				return;
 			}
 			switch (curRoom) {

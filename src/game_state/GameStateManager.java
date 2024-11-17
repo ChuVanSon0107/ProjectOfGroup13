@@ -15,7 +15,7 @@ public class GameStateManager {
 			null,
 			new PauseMenu(this),
 			new GameOverMenu(this),
-			new DaoLyMenu(this)
+			new EndGame(this)
 			
 		};
 		curState = 0;

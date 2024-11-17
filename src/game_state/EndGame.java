@@ -8,11 +8,11 @@ import game_world.Tile;
 import main.WindowManager;
 import resources.Resources;
 
-public class DaoLyMenu extends GameState{
+public class EndGame extends GameState{
 
 	int time;
-	String daoly = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
-	protected DaoLyMenu(GameStateManager state) {
+	String story = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
+	protected EndGame(GameStateManager state) {
 		super(state);
 		time = 300;
 	}
@@ -20,9 +20,20 @@ public class DaoLyMenu extends GameState{
 	@Override
 	public void Loop() {
 		time--;
-		if(time >= 200) daoly = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
-		else if(time >= 100) daoly = "Thù hận sẽ chỉ sinh ra thù hận";
-		else daoly = "Hãy kết thúc mọi thứ trong hòa bình";
+
+		if(time >= 200){
+			story = "Hai người trở về vương quốc, Nữ hoàng đã đồng ý cho 2 người yêu nhau";
+		}
+
+		else if(time >= 100){
+			story = "Họ đã xây dựng cho mình 1 mái ấm hạnh phúc với những đứa con thơ";
+		}
+
+		else if(time > 0){
+			story = "Và vương quốc Rừng Nguyên Sinh thì yên bình, ngày càng hưng thịnh";
+		}
+
+
 		if(time == 0){
 			gameStateManager.setCurState(5);
 		}
@@ -35,13 +46,13 @@ public class DaoLyMenu extends GameState{
 		graphics.fillRect(0, 0, WindowManager.WIDTH, WindowManager.HEIGHT);
 		graphics.setColor(Color.white);
 		graphics.setFont(new Font("Arial", Font.BOLD, 20));
-		graphics.drawString(daoly, 250, WindowManager.HEIGHT/2);
+		graphics.drawString(story, 50, WindowManager.HEIGHT/2);
 		graphics.drawImage(Resources.TEXTURES.get(Resources.PLAYER_RIGHT),WindowManager.WIDTH/2-Tile.size
 				,WindowManager.HEIGHT/3 , Tile.size, Tile.size, null);
 		
 		graphics.drawImage(Resources.TEXTURES.get(Resources.HEART),WindowManager.WIDTH/2
 				,WindowManager.HEIGHT / 3 , Tile.size, Tile.size, null);
-		graphics.drawImage(Resources.TEXTURES.get(Resources.AD),WindowManager.WIDTH/2+Tile.size
+		graphics.drawImage(Resources.TEXTURES.get(Resources.PLAYER),WindowManager.WIDTH/2+Tile.size
 				,WindowManager.HEIGHT / 3 , Tile.size, Tile.size, null);
 	}
 
