@@ -8,16 +8,24 @@ public class GameStateManager {
 	public static int blood_fall = 0;
 	public GameStateManager() {
 		gameStates = new GameState[] {
+// new MainMenu(this),
+			// null,
+			// new PauseMenu(this),
+			// new GameOverMenu(this),
+			// new DaoLyMenu(this),
+			// null,
+
+			// //add
+			// new GuideMenu(this),
+			// new StoryMenu(this)
+
 			new MainMenu(this),
+			new StoryMenu(this),
+			new GuideMenu(this),
 			null,
 			new PauseMenu(this),
 			new GameOverMenu(this),
-			new DaoLyMenu(this),
-			null,
-
-			//add
-			new GuideMenu(this),
-			new StoryMenu(this)
+			new DaoLyMenu(this)
 		};
 		curState = 0;
 	}

@@ -1,13 +1,12 @@
 package game_state;
 
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
 
 import main.WindowManager;
 import resources.Resources;
 
 public class GuideMenu  extends GameState {
-
-    int timeChangeMenu = 150;
 
     public GuideMenu(GameStateManager state){
         super(state);
@@ -15,11 +14,7 @@ public class GuideMenu  extends GameState {
 
     @Override
     public void Loop() {
-        timeChangeMenu --;
-        if(timeChangeMenu <= 0){
-            gameStateManager.setGameStates(7, new StoryMenu(gameStateManager));
-			gameStateManager.setCurState(7);
-        }
+
     }
 
     @Override
@@ -29,7 +24,10 @@ public class GuideMenu  extends GameState {
 
     @Override
     public void KeyPressed(int keyCode) {
-        
+        if(keyCode == KeyEvent.VK_ENTER){
+            gameStateManager.setGameStates(3, new PlayingState(gameStateManager));
+            gameStateManager.setCurState(3);
+        }
     }
 
     @Override
