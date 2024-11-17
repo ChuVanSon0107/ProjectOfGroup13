@@ -12,18 +12,14 @@ public class Loader {
 	public void load(){
         try {  
             BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
-
-        	Resources.TEXTURES.add(Resources.TILE, ImageIO.read(getClass().getResource("/image/title.png")));
             
-            BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
-            
+            //BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
         	Resources.TEXTURES.add(Resources.TILE,image.getSubimage(16*1, 16*5, 16, 16));
     		Resources.TEXTURES.add(Resources.WALL, ImageIO.read(getClass().getResource("/image/wall.png")));
     		Resources.TEXTURES.add(Resources.WATER, ImageIO.read(getClass().getResource("/image/water.png")));
     		Resources.TEXTURES.add(Resources.DIRT, ImageIO.read(getClass().getResource("/image/dirt.png")));
             Resources.TEXTURES.add(Resources.TREE, ImageIO.read(getClass().getResource("/image/tree.png")));
             Resources.TEXTURES.add(Resources.STONE, ImageIO.read(getClass().getResource("/image/stone.png")));
-            Resources.TEXTURES.add(Resources.GRASS, ImageIO.read(getClass().getResource("/image/grass.png")));              
             Resources.TEXTURES.add(Resources.GRASS, ImageIO.read(getClass().getResource("/image/stone.png")));              
             Resources.TEXTURES.add(Resources.PLAYER, ImageIO.read(getClass().getResource("/image/player.png")));
             Resources.TEXTURES.add(Resources.PLAYER_2, ImageIO.read(getClass().getResource("/image/player_2.png")));
