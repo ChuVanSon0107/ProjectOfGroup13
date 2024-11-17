@@ -11,6 +11,8 @@ import javax.imageio.ImageIO;
 public class Loader {
 	public void load(){
         try {  
+            BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
+
         	Resources.TEXTURES.add(Resources.TILE, ImageIO.read(getClass().getResource("/image/title.png")));
         	BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
             BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
@@ -76,6 +78,7 @@ public class Loader {
             Resources.TEXTURES.add(Resources.UFO, ImageIO.read(getClass().getResource("/image/ufo.png")));
             Resources.TEXTURES.add(Resources.PLANET, ImageIO.read(getClass().getResource("/image/planet.png")));
             Resources.TEXTURES.add(Resources.UNIVERSE, ImageIO.read(getClass().getResource("/image/universe.jpg")));
+<<<<<<< HEAD
             Resources.TEXTURES.add(Resources.WALL1, ImageIO.read(getClass().getResource("/image/wall1.png")));
             Resources.TEXTURES.add(Resources.WALL2, ImageIO.read(getClass().getResource("/image/wall2.png")));
             Resources.TEXTURES.add(Resources.WALL3, ImageIO.read(getClass().getResource("/image/wall3.png")));
@@ -97,6 +100,9 @@ public class Loader {
             Resources.TEXTURES.add(Resources.WALL19, ImageIO.read(getClass().getResource("/image/wall19.png")));
             Resources.TEXTURES.add(Resources.WALL20, ImageIO.read(getClass().getResource("/image/wall20.png")));
             Resources.TEXTURES.add(Resources.WALL21, ImageIO.read(getClass().getResource("/image/wall21.png")));
+=======
+            
+>>>>>>> 25d13cc3e3c196e186c591d1faee05335e3bbe64
             Resources.TEXTURES.add(Resources.WALL1, image.getSubimage(16*0,16*0,16,16));
             Resources.TEXTURES.add(Resources.WALL2, image.getSubimage(16*1, 16*0, 16, 16));
             Resources.TEXTURES.add(Resources.WALL3, image.getSubimage(16*2, 16*0, 16, 16));
@@ -182,13 +188,17 @@ public class Loader {
                     Resources.TEXTURES.add(image.getSubimage(16*j, 16*i, 16, 16));
                 }
             }
+<<<<<<< HEAD
             // PRINCESS 
             Resources.TEXTURES.add(image1.getSubimage(0, 0, 16, 16));
+=======
+>>>>>>> 25d13cc3e3c196e186c591d1faee05335e3bbe64
             //GUIDEMENU
             Resources.TEXTURES.add(Resources.GUIDEMENU, ImageIO.read(getClass().getResource("/image/guideMenu.jpg")));
 
             //STORYMENU
             Resources.TEXTURES.add(Resources.STORYMENU, ImageIO.read(getClass().getResource("/image/storyMenu.jpg")));
+
 
 
         }catch (Exception e) {

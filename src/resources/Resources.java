@@ -55,6 +55,10 @@ public class Resources {
 	    public static final byte UFO = 48;
 	    public static final byte PLANET = 49;
 	    public static final byte UNIVERSE = 50;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 25d13cc3e3c196e186c591d1faee05335e3bbe64
 		// GRASS REPLACES FOR WALL 
 	    public static final int WALL1 = 51;
 	    public static final int WALL2 = 52;
@@ -145,6 +149,7 @@ public class Resources {
 		public static final int GATE10 = 126;
 		public static final int GATE11 = 127;
 		public static final int GATE12 = 128;
+<<<<<<< HEAD
 		// PRINCESS
 		public static final int PRINCESS1 = 129;
 		//GuidMenu
@@ -153,6 +158,12 @@ public class Resources {
 		public static final int STORYMENU = 131;
 
 	
+=======
+		//GuidMenu
+		public static final int GUIDEMENU = 129;
+		//StoryMenu
+		public static final int STORYMENU = 130;
+>>>>>>> 25d13cc3e3c196e186c591d1faee05335e3bbe64
 	    public static ArrayList<BufferedImage> TEXTURES = new ArrayList<>();
 
 	}

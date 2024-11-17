@@ -93,5 +93,19 @@ public class Entity extends Rectangle{
 			curDelayTime=delayTime;
 		}
 	}
-	
+	// public void setPosition(int x,int y){
+	// 	this.x = x;
+	// 	this.y = y;
+	// }
+	// public void savePrevPosition(int x,int y){
+	// 	this.prevPositionX = x;
+	// 	this.prevPositionY = y;
+	// }
+	// public int getPrevPositionX(){
+	// 	return prevPositionX;
+	// }
+	// public int getPrevPositionY(){
+
+	// 	return prevPositionY;
+	// }
 }
