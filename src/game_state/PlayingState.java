@@ -447,4 +447,3 @@ public class PlayingState extends GameState{
 	}
 
 }
-

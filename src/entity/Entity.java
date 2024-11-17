@@ -14,19 +14,21 @@ public class Entity extends Rectangle{
 	protected int curFrame;// ảnh hiện tại
 	protected int delayTime;// đang ở ảnh 1 muốn sang ảnh 2 phải đợi 1 khoảng thời gian
 	protected int frameCount;// số ảnh trong bộ animation
-	protected byte imgID;// chỉ đến cái vị trí của cái ảnh trong mảng các ảnh
+	protected int imgID;// chỉ đến cái vị trí của cái ảnh trong mảng các ảnh
 	protected float speed;// tốc độ
 	private int curDelayTime;// 1 cái số đếm
+	private int prevPositionX = 999; // Save previous entity's X position when they change to the next room
+	private int prevPositionY = 999; // Save previous entity's Y position when they change to the next room
 	// delaytime = 20s // cố định sẽ không thay đổi
 	// 19 curDe
-	public Entity(int x, int y, Vector facing, int delayTime, int frameCount, byte imgID, float speed) {
-		super(x*Tile.size, y * Tile.size, Tile.size, Tile.size);
+	public Entity(int x, int y, Vector facing, int delayTime, int frameCount, int imgID2, float speed) {
+		super(x*Tile.size, y*Tile.size, Tile.size, Tile.size);
 		this.facing = facing;
 		this.delayTime = delayTime;
 		this.frameCount = frameCount;
-		this.imgID = imgID;
+		this.imgID = imgID2;
 		this.speed = speed;
-		curDelayTime = delayTime;
+		curDelayTime=delayTime;
 	}
 	
 	public void OnLoop() {
@@ -69,12 +71,41 @@ public class Entity extends Rectangle{
 	public void SetCenterY(int y) {
 		super.y= y - height/2;
 	}
-	
+	public void setPosition(int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	public void savePrevPosition(int x,int y){
+		this.prevPositionX = x;
+		this.prevPositionY = y;
+	}
+	public int getPrevPositionX(){
+		return prevPositionX;
+	}
+	public int getPrevPositionY(){
+
+		return prevPositionY;
+	}
 	public void AnimationDisplay() {
-		if(curDelayTime > 0) curDelayTime--;
+		if(curDelayTime > 0)curDelayTime--;
 		else {
 			curFrame = (curFrame + 1) % frameCount;
-			curDelayTime = delayTime;
+			curDelayTime=delayTime;
 		}
 	}
+	// public void setPosition(int x,int y){
+	// 	this.x = x;
+	// 	this.y = y;
+	// }
+	// public void savePrevPosition(int x,int y){
+	// 	this.prevPositionX = x;
+	// 	this.prevPositionY = y;
+	// }
+	// public int getPrevPositionX(){
+	// 	return prevPositionX;
+	// }
+	// public int getPrevPositionY(){
+
+	// 	return prevPositionY;
+	// }
 }

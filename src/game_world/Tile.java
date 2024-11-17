@@ -9,24 +9,28 @@ public class Tile extends Rectangle{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private byte id;
+	private int id;
 	public static final int size = 50;
 	private byte prop;
-	// 0: None
-	// 1: Wall
-	// 2: Water
-	public Tile(byte id,int x,int y) {
+	public Tile(int ids,int x,int y) {
 		super(x * size, y * size, size, size);
-		this.id = id;
-		if(id == Resources.WALL || id == Resources.STONE || id == Resources.TREE) prop = 1;
-		else if(id >= Resources.WALL1 && id <= Resources.WALL21) prop = 1;
-		else if(id == Resources.WATER || id == Resources.DIRT) prop=2;
-		else prop = 0;
+		this.id = ids;
+		// prop = 0 -> pass
+		// prop = 1 -> block
+		// prop = 2 -> slow
+		// prop = 3 -> change room 
+		if(id== Resources.WALL || id==Resources.STONE || id== Resources.TREE)prop=1;
+		else if((id >= Resources.GRASS1 && id <= Resources.GRASS4) || 
+				(id >= Resources.TREE1 && id <= Resources.TREE6))prop = 1;
+		else if(id >=Resources.WALL1 && id<=Resources.WALL21)prop = 0;
+		else if(id >= Resources.WATER1 && id <= Resources.WATER18)prop=2;
+		else if(id >= Resources.CAVE1 || id <= Resources.CAVE6) prop = 3;
+		else prop=0;
 	}
 	public byte GetProperty() {
 		return prop;
 	}
-	public byte getID() {
+	public int getID() {
 		return id;
 	}
 }
