@@ -256,7 +256,6 @@ public class PlayingState extends GameState{
 	private World world;
 	private Player player;
 	private int timeToGameOver = 50;
-	boolean p = true;
 	boolean inConversation = false;
 	Conversation conversation;
 
@@ -264,8 +263,6 @@ public class PlayingState extends GameState{
 		super(gameStateManager);
 		player = new Player(7, 7, 2, 2, Resources.PLAYER, 1);
 		world = new World(player);
-		p = true;
-
 
 		this.inConversation = true;
 
@@ -289,10 +286,10 @@ public class PlayingState extends GameState{
 	public void Loop() {
 		if(this.inConversation == false){
 			world.ChangeRoom();
-			//meet my daughter when defeat all of the monsters and enemies
+			//meet my princess when defeat all of the monsters and enemies
 			if(world.GetCur() == World.count - 1){	
 				if(GameOverMenu.result == false){
-					if(player.x <= Tile.size * 4){
+					if(player.x <= Tile.size * 20){
 						this.inConversation = true;
 						String[] sentences = new String[]{
 							"Ôi con gái của ta, ta đến cứu con đây",
@@ -421,7 +418,7 @@ public class PlayingState extends GameState{
 			gameStateManager.setCurState(4);
 			break;
 		case KeyEvent.VK_ENTER:
-			if(this.inConversation) {
+			if(this.inConversation == true) {
 				if(conversation != null) conversation.ChangeSentence();
 			}
 			break;
