@@ -306,7 +306,7 @@ public class PlayingState extends GameState{
 						byte[] imgIDs = new byte[] {
 							Resources.PLAYER,
 							Resources.PLAYER,
-Resources.PLAYER,
+							Resources.PLAYER,
 							Resources.PLAYER,
 							Resources.PLAYER,
 							Resources.PLAYER,
