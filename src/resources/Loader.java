@@ -14,7 +14,7 @@ public class Loader {
             BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
 
         	Resources.TEXTURES.add(Resources.TILE, ImageIO.read(getClass().getResource("/image/title.png")));
-        	BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
+            
             BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
             
         	Resources.TEXTURES.add(Resources.TILE,image.getSubimage(16*1, 16*5, 16, 16));
@@ -78,31 +78,7 @@ public class Loader {
             Resources.TEXTURES.add(Resources.UFO, ImageIO.read(getClass().getResource("/image/ufo.png")));
             Resources.TEXTURES.add(Resources.PLANET, ImageIO.read(getClass().getResource("/image/planet.png")));
             Resources.TEXTURES.add(Resources.UNIVERSE, ImageIO.read(getClass().getResource("/image/universe.jpg")));
-<<<<<<< HEAD
-            Resources.TEXTURES.add(Resources.WALL1, ImageIO.read(getClass().getResource("/image/wall1.png")));
-            Resources.TEXTURES.add(Resources.WALL2, ImageIO.read(getClass().getResource("/image/wall2.png")));
-            Resources.TEXTURES.add(Resources.WALL3, ImageIO.read(getClass().getResource("/image/wall3.png")));
-            Resources.TEXTURES.add(Resources.WALL4, ImageIO.read(getClass().getResource("/image/wall4.png")));
-            Resources.TEXTURES.add(Resources.WALL5, ImageIO.read(getClass().getResource("/image/wall5.png")));
-            Resources.TEXTURES.add(Resources.WALL6, ImageIO.read(getClass().getResource("/image/wall6.png")));
-            Resources.TEXTURES.add(Resources.WALL7, ImageIO.read(getClass().getResource("/image/wall7.png")));
-            Resources.TEXTURES.add(Resources.WALL8, ImageIO.read(getClass().getResource("/image/wall8.png")));
-            Resources.TEXTURES.add(Resources.WALL9, ImageIO.read(getClass().getResource("/image/wall9.png")));
-            Resources.TEXTURES.add(Resources.WALL10, ImageIO.read(getClass().getResource("/image/wall10.png")));
-            Resources.TEXTURES.add(Resources.WALL11, ImageIO.read(getClass().getResource("/image/wall11.png")));
-            Resources.TEXTURES.add(Resources.WALL12, ImageIO.read(getClass().getResource("/image/wall12.png")));
-            Resources.TEXTURES.add(Resources.WALL13, ImageIO.read(getClass().getResource("/image/wall13.png")));
-            Resources.TEXTURES.add(Resources.WALL14, ImageIO.read(getClass().getResource("/image/wall14.png")));
-            Resources.TEXTURES.add(Resources.WALL15, ImageIO.read(getClass().getResource("/image/wall15.png")));
-            Resources.TEXTURES.add(Resources.WALL16, ImageIO.read(getClass().getResource("/image/wall16.png")));
-            Resources.TEXTURES.add(Resources.WALL17, ImageIO.read(getClass().getResource("/image/wall17.png")));
-            Resources.TEXTURES.add(Resources.WALL18, ImageIO.read(getClass().getResource("/image/wall18.png")));
-            Resources.TEXTURES.add(Resources.WALL19, ImageIO.read(getClass().getResource("/image/wall19.png")));
-            Resources.TEXTURES.add(Resources.WALL20, ImageIO.read(getClass().getResource("/image/wall20.png")));
-            Resources.TEXTURES.add(Resources.WALL21, ImageIO.read(getClass().getResource("/image/wall21.png")));
-=======
             
->>>>>>> 25d13cc3e3c196e186c591d1faee05335e3bbe64
             Resources.TEXTURES.add(Resources.WALL1, image.getSubimage(16*0,16*0,16,16));
             Resources.TEXTURES.add(Resources.WALL2, image.getSubimage(16*1, 16*0, 16, 16));
             Resources.TEXTURES.add(Resources.WALL3, image.getSubimage(16*2, 16*0, 16, 16));
@@ -188,11 +164,6 @@ public class Loader {
                     Resources.TEXTURES.add(image.getSubimage(16*j, 16*i, 16, 16));
                 }
             }
-<<<<<<< HEAD
-            // PRINCESS 
-            Resources.TEXTURES.add(image1.getSubimage(0, 0, 16, 16));
-=======
->>>>>>> 25d13cc3e3c196e186c591d1faee05335e3bbe64
             //GUIDEMENU
             Resources.TEXTURES.add(Resources.GUIDEMENU, ImageIO.read(getClass().getResource("/image/guideMenu.jpg")));
 
