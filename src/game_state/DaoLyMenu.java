@@ -14,25 +14,23 @@ public class DaoLyMenu extends GameState{
 	String daoly = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
 	protected DaoLyMenu(GameStateManager state) {
 		super(state);
-		// TODO Auto-generated constructor stub
 		time = 300;
 	}
 
 	@Override
 	public void Loop() {
-		// TODO Auto-generated method stub
 		time--;
-		if(time>=200)daoly = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
-		else if(time>=100) daoly = "Thù hận sẽ chỉ sinh ra thù hận";
+		if(time >= 200) daoly = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
+		else if(time >= 100) daoly = "Thù hận sẽ chỉ sinh ra thù hận";
 		else daoly = "Hãy kết thúc mọi thứ trong hòa bình";
-		if(time==0)
-			gameStateManager.setCurState(3);
+		if(time == 0){
+			gameStateManager.setCurState(5);
+		}
 	}
 
 	@Override
 	public void Render(Graphics graphics) {
-		// TODO Auto-generated method stub
-		
+
 		graphics.setColor(Color.black);
 		graphics.fillRect(0, 0, WindowManager.WIDTH, WindowManager.HEIGHT);
 		graphics.setColor(Color.white);
@@ -42,20 +40,19 @@ public class DaoLyMenu extends GameState{
 				,WindowManager.HEIGHT/3 , Tile.size, Tile.size, null);
 		
 		graphics.drawImage(Resources.TEXTURES.get(Resources.HEART),WindowManager.WIDTH/2
-				,WindowManager.HEIGHT/3 , Tile.size, Tile.size, null);
+				,WindowManager.HEIGHT / 3 , Tile.size, Tile.size, null);
 		graphics.drawImage(Resources.TEXTURES.get(Resources.AD),WindowManager.WIDTH/2+Tile.size
-				,WindowManager.HEIGHT/3 , Tile.size, Tile.size, null);
+				,WindowManager.HEIGHT / 3 , Tile.size, Tile.size, null);
 	}
 
 	@Override
 	public void KeyPressed(int keyCode) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void KeyReleased(int keyCode) {
-		// TODO Auto-generated method stub
+
 		
 	}
 

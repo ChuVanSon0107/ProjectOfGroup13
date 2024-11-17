@@ -40,6 +40,7 @@ public class GameOverMenu extends GameState{
 		graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON), 0, 0, 800, 200, null);
 		
 		graphics.setColor(Color.BLACK);
+		
 		if(result == true){
 			graphics.drawString(this.gameoverMenu[0], 300, 120);
 		}
