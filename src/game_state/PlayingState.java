@@ -28,8 +28,8 @@ public class PlayingState extends GameState{
 
 		String[] sentences = new String[]{
 			"Các người thật hèn hạ, dám đi bắt cóc công chúa",
-			"Hôm nay thay mặt cho nữ hoàng, Ta sẽ tiêu diệt các ngươi",
-			"Để xem các ngươi làm được trò chống gì",
+			"Hôm nay ta sẽ tiêu diệt các ngươi",
+			"Để xem các ngươi làm được trò trống gì",
 			"Ta sẽ quét sạch các ngươi!!"
 		};
 		byte[] imgIDs = new byte[] {
@@ -50,9 +50,9 @@ public class PlayingState extends GameState{
 					if(true){
 						this.inConversation = true;
 						String[] sentences = new String[]{
-							"Công chúa ơi, ta đã đến đây cứu công chúa đây",
+							"Ta đã đến đây cứu công chúa đây",
 							"Công chúa đừng sợ, có ta ở đây rồi",
-							"Ta đã tiêu diệt hết tất cả bọn chúng rồi",
+							"Ta đã tiêu diệt hết tất cả bọn chúng",
 							"Chúng ta hãy về nhà thôi",
 							"Cảm ơn ngươi ta đến cứu ta",
 							"Ta sẽ dâng nguyện yêu ngươi suốt đời",

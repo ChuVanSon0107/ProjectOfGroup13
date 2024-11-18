@@ -18,7 +18,7 @@ public class MainMenu extends GameState{
     private static final String EASY_GAME = "EASY";
     private static final String MEDIUM_GAME = "MEDIUM";
     private static final String HARD_GAME = "HARD";
-    private static final String LABEL = "SAVE MY DAUGHTER";
+    private static final String LABEL = "SAVE MY PRINCESS";
  	protected int selected;
  	private static int level;
  	
