@@ -27,7 +27,7 @@ public class PlayingState extends GameState{
 		this.inConversation = true;
 
 		String[] sentences = new String[]{
-			"Các người thật hèn hạ, dám đi bắt cóc công chúa",
+			"Các người dám bắt cóc công chúa",
 			"Hôm nay ta sẽ tiêu diệt các ngươi",
 			"Để xem các ngươi làm được trò trống gì",
 			"Ta sẽ quét sạch các ngươi!!"
