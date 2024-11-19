@@ -76,7 +76,9 @@ public class PlayingState extends GameState{
 					}
 				}
 				else{
+					gameStateManager.setGameStates(6, new EndGame(gameStateManager));
 					gameStateManager.setCurState(6);
+					GameOverMenu.result = false;
 				}
 			}
 

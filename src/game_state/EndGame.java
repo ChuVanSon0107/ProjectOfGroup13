@@ -9,10 +9,11 @@ import main.WindowManager;
 import resources.Resources;
 
 public class EndGame extends GameState{
-
+	
 	int time;
 	String story = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
-	protected EndGame(GameStateManager state) {
+
+	public EndGame(GameStateManager state) {
 		super(state);
 		time = 300;
 	}
@@ -35,6 +36,7 @@ public class EndGame extends GameState{
 
 
 		if(time == 0){
+			gameStateManager.setGameStates(5, new GameOverMenu(gameStateManager));
 			gameStateManager.setCurState(5);
 		}
 	}

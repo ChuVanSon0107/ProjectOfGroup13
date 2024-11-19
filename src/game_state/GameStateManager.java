@@ -12,7 +12,7 @@ public class GameStateManager {
 			new MainMenu(this),
 			new StoryMenu(this),
 			new GuideMenu(this),
-			null,
+			new PlayingState(this),
 			new PauseMenu(this),
 			new GameOverMenu(this),
 			new EndGame(this)
