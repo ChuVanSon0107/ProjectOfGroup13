@@ -12,8 +12,8 @@ public class Loader {
 	public void load(){
         try {  
             BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
-            
-            //BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
+            BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
+
         	Resources.TEXTURES.add(Resources.TILE,image.getSubimage(16*1, 16*5, 16, 16));
     		Resources.TEXTURES.add(Resources.WALL, ImageIO.read(getClass().getResource("/image/wall.png")));
     		Resources.TEXTURES.add(Resources.WATER, ImageIO.read(getClass().getResource("/image/water.png")));
@@ -165,7 +165,8 @@ public class Loader {
 
             //STORYMENU
             Resources.TEXTURES.add(Resources.STORYMENU, ImageIO.read(getClass().getResource("/image/storyMenu.jpg")));
-
+            // PRINCESS
+            Resources.TEXTURES.add(image1.getSubimage(0,0,16,16));
 
 
         }catch (Exception e) {

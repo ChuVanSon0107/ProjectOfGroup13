@@ -83,6 +83,8 @@ public class World {
 			room.SetPlayer(player);
 		}
 		player.SetRoom(rooms[0]);
+		// Adding princes
+		rooms[4].GetEntities().add(new Enemy(8, 2, Vector.Up,0 , 0, Resources.PRINCESS1,0, rooms[3]));
 		if(MainMenu.getLevel() == 0) {
 			 // Adding princes
 			//rooms[4].GetEntities().add(new Enemy(8, 2, Vector.Up,0 , 0, Resources.PRINCESS1,0, rooms[3]));

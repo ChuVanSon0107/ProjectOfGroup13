@@ -149,6 +149,8 @@ public class Resources {
 		public static final int GUIDEMENU = 129;
 		//StoryMenu
 		public static final int STORYMENU = 130;
+		// PRINCESS
+		public static final int PRINCESS1 = 131;
 	    public static ArrayList<BufferedImage> TEXTURES = new ArrayList<>();
 
 	}
