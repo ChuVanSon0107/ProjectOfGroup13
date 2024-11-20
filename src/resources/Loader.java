@@ -11,9 +11,11 @@ import javax.imageio.ImageIO;
 public class Loader {
 	public void load(){
         try {  
+            // LOAD TILESET IMAGE
             BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
+            // LOAD PRINCESS IMAGE
             BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
-
+            // ADDING TILE
         	Resources.TEXTURES.add(Resources.TILE,image.getSubimage(16*1, 16*5, 16, 16));
     		Resources.TEXTURES.add(Resources.WALL, ImageIO.read(getClass().getResource("/image/wall.png")));
     		Resources.TEXTURES.add(Resources.WATER, ImageIO.read(getClass().getResource("/image/water.png")));
@@ -77,8 +79,7 @@ public class Loader {
                     x = 3;
                     y = 4;
                 }
-                Resources.TEXTURES.add(Resources.class.getField("ROAD" + i).getInt(null), 
-                                       image.getSubimage(16 * x, 16 * y, 16, 16));
+                Resources.TEXTURES.add(Resources.class.getField("ROAD" + i).getInt(null),image.getSubimage(16 * x, 16 * y, 16, 16));
             }
             // ADDING GRASS TILES
             int tileIndex = 1; // Start from GRASS1
