@@ -13,8 +13,6 @@ public class Loader {
         try {  
             // LOAD TILESET IMAGE
             BufferedImage image = ImageIO.read(getClass().getResource("/image/gentle forest v03.png"));
-            // LOAD PRINCESS IMAGE
-            BufferedImage image1 = ImageIO.read(getClass().getResource("/image/missprincess_0.png"));
             // ADDING TILE
         	Resources.TEXTURES.add(Resources.TILE,image.getSubimage(16*1, 16*5, 16, 16));
     		Resources.TEXTURES.add(Resources.WALL, ImageIO.read(getClass().getResource("/image/wall.png")));
@@ -147,7 +145,9 @@ public class Loader {
             // ADDING STORYMENU
             Resources.TEXTURES.add(Resources.STORYMENU, ImageIO.read(getClass().getResource("/image/storyMenu.jpg")));
             // ADDING PRINCESS
-            Resources.TEXTURES.add(image1.getSubimage(0,0,16,16));
+            Resources.TEXTURES.add(ImageIO.read(getClass().getResource("/image/Idle_South_0.png")));
+            Resources.TEXTURES.add(ImageIO.read(getClass().getResource("/image/Jump_South_0.png")));
+
         }catch (Exception e) {
         		System.out.print("Load Failed\n");
                 e.printStackTrace();

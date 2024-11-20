@@ -37,7 +37,6 @@ public class Entity extends Rectangle{
 		// lúc play thì nó sẽ tạo 1 vòng lặp vô tận đến khi ....
 	}
 	public void Render(Graphics g) {
-		
 		g.drawImage(Resources.TEXTURES.get(imgID + curFrame), x, y, width, height, null);
 	}
 	
