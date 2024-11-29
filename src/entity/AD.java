@@ -82,6 +82,7 @@ public class AD extends Monster{
 			if(i > 0) {
 				Tile tile = room.GetTile(i - 1, j);
 				if(tile.GetProperty()!=1) {
+					System.out.println(tile.GetProperty());
 					Vector d1 = new Vector((float)player.x- (float)tile.x, (float)player.y- (float)tile.y);
 					if(d1.Length()>d.Length()) {
 						d = d1;
