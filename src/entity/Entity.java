@@ -22,13 +22,13 @@ public class Entity extends Rectangle{
 	// delaytime = 20s // cố định sẽ không thay đổi
 	// 19 curDe
 	public Entity(int x, int y, Vector facing, int delayTime, int frameCount, int imgID2, float speed) {
-		super(x*Tile.size, y*Tile.size, Tile.size, Tile.size);
+		super(x * Tile.size, y * Tile.size, Tile.size, Tile.size);
 		this.facing = facing;
 		this.delayTime = delayTime;
 		this.frameCount = frameCount;
 		this.imgID = imgID2;
 		this.speed = speed;
-		curDelayTime=delayTime;
+		curDelayTime = delayTime;
 	}
 	
 	public void OnLoop() {
