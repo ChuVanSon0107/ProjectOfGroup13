@@ -47,7 +47,7 @@ public class PlayingState extends GameState{
 			//meet my princess when defeat all of the monsters and enemies
 			if(world.GetCur() == World.count - 1){	
 				if(GameOverMenu.result == false){
-					if(true){
+					if(this.player.y <= 4 * Tile.size){
 						this.inConversation = true;
 						String[] sentences = new String[]{
 							"Ta đã đến đây cứu công chúa đây",
@@ -65,10 +65,10 @@ public class PlayingState extends GameState{
 							Resources.PLAYER,
 							Resources.PLAYER,
 							Resources.PLAYER,
+							Resources.PRINCESS1,
+							Resources.PRINCESS1,
 							Resources.PLAYER,
-							Resources.PLAYER,
-							Resources.PLAYER,
-							Resources.PLAYER
+							Resources.PRINCESS1
 						};
 
 						this.conversation = new Conversation(150, imgIDs, sentences);
@@ -78,7 +78,6 @@ public class PlayingState extends GameState{
 				else{
 					gameStateManager.setGameStates(6, new EndGame(gameStateManager));
 					gameStateManager.setCurState(6);
-					GameOverMenu.result = false;
 				}
 			}
 

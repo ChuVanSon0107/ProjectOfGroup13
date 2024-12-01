@@ -11,7 +11,7 @@ import resources.Resources;
 public class EndGame extends GameState{
 	
 	int time;
-	String story = "Chiến tranh sẽ chỉ sinh ra chiến tranh";
+	String story = "Rừng Nguyên Sinh";
 
 	public EndGame(GameStateManager state) {
 		super(state);
@@ -36,7 +36,6 @@ public class EndGame extends GameState{
 
 
 		if(time == 0){
-			gameStateManager.setGameStates(5, new GameOverMenu(gameStateManager));
 			gameStateManager.setCurState(5);
 		}
 	}
@@ -49,7 +48,7 @@ public class EndGame extends GameState{
 		graphics.setColor(Color.white);
 		graphics.setFont(new Font("Arial", Font.BOLD, 20));
 		graphics.drawString(story, 50, WindowManager.HEIGHT/2);
-		graphics.drawImage(Resources.TEXTURES.get(Resources.PLAYER_RIGHT),WindowManager.WIDTH/2-Tile.size
+		graphics.drawImage(Resources.TEXTURES.get(Resources.PRINCESS1),WindowManager.WIDTH/2-Tile.size
 				,WindowManager.HEIGHT/3 , Tile.size, Tile.size, null);
 		
 		graphics.drawImage(Resources.TEXTURES.get(Resources.HEART),WindowManager.WIDTH/2

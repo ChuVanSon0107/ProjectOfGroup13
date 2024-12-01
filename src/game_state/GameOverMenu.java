@@ -39,7 +39,6 @@ public class GameOverMenu extends GameState{
 		
 		graphics.setFont(new Font("Arial", Font.BOLD, 40));
 		graphics.drawImage(Resources.TEXTURES.get(Resources.BUTTON), 0, 0, 800, 200, null);
-		
 		graphics.setColor(Color.BLACK);
 		
 		if(result == true){

@@ -183,7 +183,7 @@ public class World {
 		//System.out.println(player.getSpeed());
 		//System.out.println(rooms[curRoom].GetTile(y,x).getID());
 		System.out.println(player.getPrevPositionX() + " " + player.getPrevPositionY());
-		if ((rooms[curRoom].GetTile(y,x).getID() >= Resources.CAVE1 &&  rooms[curRoom].GetTile(y,x).getID() <= Resources.CAVE6)
+		if ((rooms[curRoom].GetTile(y, x).getID() >= Resources.CAVE1 &&  rooms[curRoom].GetTile(y,x).getID() <= Resources.CAVE6)
 			|| player.getCenterY() < rooms[curRoom].GetTile(0, 0).y) {
 			curRoom++;
 			player.savePrevPosition(x, y + 1);

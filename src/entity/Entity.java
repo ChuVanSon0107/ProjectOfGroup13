@@ -36,6 +36,7 @@ public class Entity extends Rectangle{
 		// là 1 trạng thái của  game
 		// lúc play thì nó sẽ tạo 1 vòng lặp vô tận đến khi ....
 	}
+
 	public void Render(Graphics g) {
 		g.drawImage(Resources.TEXTURES.get(imgID + curFrame), x, y, width, height, null);
 	}
@@ -43,6 +44,7 @@ public class Entity extends Rectangle{
 	public void DecreaseTime() {
 		// 
 	}
+
 	// con nào nó override thì nó ko đi qua
 	public void CollisionWall(Tile tile) {
 		Rectangle rectangle = this.intersection(tile);
@@ -61,14 +63,14 @@ public class Entity extends Rectangle{
 		}
 	}
 	public void SetFacing(Vector facing) {
-		this.facing=facing;
+		this.facing = facing;
 		
 	}
 	public Vector GetFacing() {
 		return facing;
 	}
 	public void SetCenterY(int y) {
-		super.y= y - height/2;
+		super.y = y - height / 2;
 	}
 	public void setPosition(int x,int y){
 		this.x = x;
@@ -82,29 +84,14 @@ public class Entity extends Rectangle{
 		return prevPositionX;
 	}
 	public int getPrevPositionY(){
-
 		return prevPositionY;
 	}
+
 	public void AnimationDisplay() {
 		if(curDelayTime > 0)curDelayTime--;
 		else {
 			curFrame = (curFrame + 1) % frameCount;
-			curDelayTime=delayTime;
+			curDelayTime = delayTime;
 		}
 	}
-	// public void setPosition(int x,int y){
-	// 	this.x = x;
-	// 	this.y = y;
-	// }
-	// public void savePrevPosition(int x,int y){
-	// 	this.prevPositionX = x;
-	// 	this.prevPositionY = y;
-	// }
-	// public int getPrevPositionX(){
-	// 	return prevPositionX;
-	// }
-	// public int getPrevPositionY(){
-
-	// 	return prevPositionY;
-	// }
 }
