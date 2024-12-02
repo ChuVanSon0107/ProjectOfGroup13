@@ -1,10 +1,9 @@
 package game_world;
 
-import javax.swing.text.html.parser.Entity;
 
 import entity.ADFire;
 import entity.ADFreeze;
-import entity.Enemy;
+import entity.Boss;
 import entity.Item;
 import entity.Monster;
 import entity.Player;
@@ -91,7 +90,11 @@ public class World {
 		rooms[4].getPrincesses().add(new Princess(8,2,640,1,Resources.PRINCESS1,0));
 		if(MainMenu.getLevel() == 0) {
 			 // room 0
-			
+
+			 	//add Boss
+				rooms[0].getEnemies().add(new Boss(10, 2, Vector.Up, 2, 2, Resources.AD, 0, rooms[0], 20, true, 0, 25));
+
+
 	    	   rooms[0].getEnemies().add(new Monster(4, 2, Vector.Up, 2, 2, Resources.MONSTER1,Resources.MONSTER1_ATTACK, 1, rooms[0], 40, false, 1, 20));
 	    	   rooms[0].getEnemies().add(new Monster(10, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[0], 40, true, 1, 20));
 	    	   // room 1

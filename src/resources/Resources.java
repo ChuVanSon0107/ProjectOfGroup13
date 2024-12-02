@@ -152,6 +152,11 @@ public class Resources {
 		public static final int PRINCESS2 = 123;
 
 
+		//BOSS
+		public static final int GHOST_ATTACK1 = 124;
+		public static final int GHOST_ATTACK2 = 125;
+
+
 	    public static ArrayList<BufferedImage> TEXTURES = new ArrayList<>();
 
 	}
