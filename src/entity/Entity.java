@@ -22,13 +22,13 @@ public class Entity extends Rectangle{
 	// delaytime = 20s // cố định sẽ không thay đổi
 	// 19 curDe
 	public Entity(int x, int y, Vector facing, int delayTime, int frameCount, int imgID2, float speed) {
-		super(x * Tile.size, y * Tile.size, Tile.size, Tile.size);
+		super(x*Tile.size, y*Tile.size, Tile.size, Tile.size);
 		this.facing = facing;
 		this.delayTime = delayTime;
 		this.frameCount = frameCount;
 		this.imgID = imgID2;
 		this.speed = speed;
-		curDelayTime = delayTime;
+		curDelayTime=delayTime;
 	}
 	
 	public void OnLoop() {
@@ -42,9 +42,8 @@ public class Entity extends Rectangle{
 	}
 	
 	public void DecreaseTime() {
-		
+		// 
 	}
-
 	// con nào nó override thì nó ko đi qua
 	public void CollisionWall(Tile tile) {
 		Rectangle rectangle = this.intersection(tile);
@@ -63,42 +62,35 @@ public class Entity extends Rectangle{
 		}
 	}
 	public void SetFacing(Vector facing) {
-		this.facing = facing;
+		this.facing=facing;
 		
 	}
 	public Vector GetFacing() {
 		return facing;
 	}
-
 	public void SetCenterY(int y) {
 		super.y= y - height/2;
 	}
-
 	public void setPosition(int x,int y){
 		this.x = x;
 		this.y = y;
 	}
-
 	public void savePrevPosition(int x,int y){
 		this.prevPositionX = x;
 		this.prevPositionY = y;
 	}
-
 	public int getPrevPositionX(){
 		return prevPositionX;
 	}
-
 	public int getPrevPositionY(){
 
 		return prevPositionY;
 	}
-
 	public void AnimationDisplay() {
-		if(curDelayTime > 0) curDelayTime--;
+		if(curDelayTime > 0)curDelayTime--;
 		else {
 			curFrame = (curFrame + 1) % frameCount;
-			curDelayTime = delayTime;
+			curDelayTime=delayTime;
 		}
 	}
-	
 }
