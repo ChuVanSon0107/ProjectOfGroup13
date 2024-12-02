@@ -16,7 +16,7 @@ public class ADFreeze extends Monster{
 		//m = new Missile(this.x, this.y, this.facing, 20, 1, Resources.MISSILE, 5,  room, 2);
 		b.SetAlive(false);
 	}
-	boolean freeze=true;
+	boolean freeze = true;
 	private icebullet b;
 	public void OnLoop() {
 		AnimationDisplay();

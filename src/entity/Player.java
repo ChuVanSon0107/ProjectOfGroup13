@@ -10,9 +10,9 @@ import resources.Resources;
 
 public class Player extends Entity{
 	public Player(int x,int y,int delayTime, int frameCount, byte imgID, float speed) {
-		super(x,y,Vector.Up, delayTime, frameCount, imgID, speed);
+		super(x, y,Vector.Up, delayTime, frameCount, imgID, speed);
 		// TODO Auto-generated constructor stub
-		hp = 1000;
+		hp = 100;
 		mp = 30;
 		def = 0;
 		QTime = 0;
@@ -58,8 +58,7 @@ public class Player extends Entity{
 		
 	}
 	public void AttackQ() {
-		if(QTime == 0) { 
-			
+		if(QTime == 0) { 	
 			QTime = 20;
 			q.SetExistTime(5);// thời gian tồn tại trên màn hình(10 vòng lặp)
 			q.SetTransform(new Vector(this.x + facing.x*this.height, this.y + facing.y*this.width), new Vector(Tile.size,Tile.size));

@@ -94,10 +94,10 @@ public class Entity extends Rectangle{
 	}
 
 	public void AnimationDisplay() {
-		if(curDelayTime > 0)curDelayTime--;
+		if(curDelayTime > 0) curDelayTime--;
 		else {
 			curFrame = (curFrame + 1) % frameCount;
-			curDelayTime=delayTime;
+			curDelayTime = delayTime;
 		}
 	}
 	

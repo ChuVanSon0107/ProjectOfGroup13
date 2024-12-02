@@ -44,14 +44,14 @@ public class ADFire extends Monster{
 	}
 	
 	protected void Attack() {
-			Vector v = new Vector(player.x - this.x, player.y - this.y);
-			v = v.Nomalize();
-            m.SetFacing(v);
-			m.x = this.x;
-			m.y = this.y;
-			m.SetAlive(true);
-			m.SetExistTime(100);
-		}
+		Vector v = new Vector(player.x - this.x, player.y - this.y);
+		v = v.Nomalize();
+		m.SetFacing(v);
+		m.x = this.x;
+		m.y = this.y;
+		m.SetAlive(true);
+		m.SetExistTime(100);
+	}
 	public void Render(Graphics g) {
 		super.Render(g);
 		//if(b.GetAlive())b.Render(g);
