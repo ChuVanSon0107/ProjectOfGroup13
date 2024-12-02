@@ -16,6 +16,7 @@ public class ADFire extends Monster{
 		m = new firebullet(this.x, this.y, this.facing, 20, 1, Resources.FIREBULLET, 5,  room, 5);
 	//	b.SetAlive(false);
 		m.SetAlive(false);
+
 	}
     boolean frezze = false;
 	private firebullet m;

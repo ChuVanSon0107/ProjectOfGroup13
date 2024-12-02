@@ -27,6 +27,10 @@ public class Monster extends Enemy{
 		this.moveID = imgID;
 		curATime = attackTime;
 		baseHP = hp;
+
+		//modify the size of monster
+		this.width = Tile.size + 25;
+		this.height = Tile.size + 25;
 	}
 	protected int stunTime = 0;
 	protected byte moveID; 
