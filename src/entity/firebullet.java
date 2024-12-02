@@ -3,12 +3,9 @@ package entity;
 import game_world.Room;
 import game_world.Vector;
 
-public class Missile extends Bullet{
-	/**
-	 * 
-	 */
+public class firebullet extends icebullet{
 	private static final long serialVersionUID = 1L;
-	public Missile(int x, int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed, Room room, int damage) {
+	public firebullet(int x, int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed, Room room, int damage) {
 		super(x,y,facing, delayTime, frameCount, imgID, speed, room, damage);
 		// TODO Auto-generated constructor stub
 	}
@@ -21,5 +18,6 @@ public class Missile extends Bullet{
 		Move();
 		super.DecreaseTime();
 		super.CollisionPlayer();
-	}
+	
+}
 }

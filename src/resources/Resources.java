@@ -21,10 +21,10 @@ public class Resources {
 		public static final byte PLAYER_RIGHT_2 = 14;
 		public static final byte AD = 15;
 		public static final byte AD_2 = 16;
-		public static final byte GHOST = 17;
-		public static final byte GHOST_2 = 18;
-		public static final byte BULLET = 19; // Changed value to avoid conflict
-		public static final byte MISSILE = 20; // Changed value to avoid conflict
+		public static final byte AD1 = 17;
+		public static final byte AD1_2 = 18;
+		public static final byte ICEBULLET = 19; 
+		public static final byte FIREBULLET = 20; 
 		public static final byte MONSTER = 21;
 		public static final byte MONSTER_2 = 22;
 		public static final byte MONSTER_ATTACK = 23;

@@ -5,20 +5,15 @@ import java.awt.Rectangle;
 import game_world.Room;
 import game_world.Vector;
 
-public class Bullet extends Enemy{
-	/**
-	 * 
-	 */
+public class icebullet extends Enemy{
 	private static final long serialVersionUID = 1L;
-	public Bullet(int x,int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed, Room room, int damage) {
+	public icebullet(int x,int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed, Room room, int damage) {
 		super(x,y,facing, delayTime, frameCount, imgID, speed, room);
 		// TODO Auto-generated constructor stub
-		existTime = 100;
 		this.damage = damage;
 	}
-
 	private int damage;
-	private int existTime;
+	private int existTime=100;
 	public void Move() {
 		super.x += (int)(facing.x * speed);
 		super.y += (int)(facing.y * speed);
@@ -42,5 +37,4 @@ public class Bullet extends Enemy{
 	}public void SetExistTime(int time) {
 		existTime= time;
 	}
-	
 }

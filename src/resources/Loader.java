@@ -31,10 +31,10 @@ public class Loader {
             Resources.TEXTURES.add(Resources.PLAYER_RIGHT_2, ImageIO.read(getClass().getResource("/image/player_right_2.png")));
             Resources.TEXTURES.add(Resources.AD, ImageIO.read(getClass().getResource("/image/AD.png")));
             Resources.TEXTURES.add(Resources.AD_2, ImageIO.read(getClass().getResource("/image/AD_2.png")));
-            Resources.TEXTURES.add(Resources.GHOST, ImageIO.read(getClass().getResource("/image/ghost.png")));
-            Resources.TEXTURES.add(Resources.GHOST_2, ImageIO.read(getClass().getResource("/image/ghost_2.png")));
-            Resources.TEXTURES.add(Resources.BULLET, ImageIO.read(getClass().getResource("/image/Bullet.png")));
-            Resources.TEXTURES.add(Resources.MISSILE, ImageIO.read(getClass().getResource("/image/missile.png")));
+            Resources.TEXTURES.add(Resources.AD1, ImageIO.read(getClass().getResource("/image/AD1.png")));
+            Resources.TEXTURES.add(Resources.AD1_2, ImageIO.read(getClass().getResource("/image/AD1_2.png")));
+            Resources.TEXTURES.add(Resources.ICEBULLET, ImageIO.read(getClass().getResource("/image/icebullet.png")));
+            Resources.TEXTURES.add(Resources.FIREBULLET, ImageIO.read(getClass().getResource("/image/firebullet.png")));
             Resources.TEXTURES.add(Resources.MONSTER, ImageIO.read(getClass().getResource("/image/monster.png")));
             Resources.TEXTURES.add(Resources.MONSTER_2, ImageIO.read(getClass().getResource("/image/monster_2.png")));
             Resources.TEXTURES.add(Resources.MONSTER_ATTACK, ImageIO.read(getClass().getResource("/image/monster_attack.png")));
@@ -42,8 +42,7 @@ public class Loader {
             Resources.TEXTURES.add(Resources.MONSTER1_2, ImageIO.read(getClass().getResource("/image/Monster1_2.png")));
             Resources.TEXTURES.add(Resources.MONSTER1_ATTACK, ImageIO.read(getClass().getResource("/image/Monster1_attack.png")));
             Resources.TEXTURES.add(Resources.ITEM, ImageIO.read(getClass().getResource("/image/item.png")));
-            
-            //Resources.TEXTURES.add(Resources.BACKGROUND, ImageIO.read(getClass().getResource("/image/anh_nen.jpg")));
+   
             Resources.TEXTURES.add(Resources.BACKGROUND, ImageIO.read(getClass().getResource("/image/background.jpg")));
 
             Resources.TEXTURES.add(Resources.PLAYER_ICE, ImageIO.read(getClass().getResource("/image/ice.png")));
@@ -81,38 +80,38 @@ public class Loader {
             }
             // ADDING GRASS TILES
             int tileIndex = 1; // Start from GRASS1
-            for(int y = 5; y < 7; y++){
-                for(int x = 1; x < 3; x++){ 
+            for(int y = 5;y < 7;y++){
+                for(int x = 1;x < 3;x++){ 
                     Resources.TEXTURES.add(Resources.class.getField("GRASS" + tileIndex).getInt(null),image.getSubimage(16*x,16*y,16,16));
-                    tileIndex ++;
+                    tileIndex++;
                 }
             }
             // ADDING FLOWER TILES
             tileIndex = 1; // Start from FLOWER1
-            for (int y = 5; y <= 6; y++) {
-                for(int x = 8; x <= 10; x++){
+            for (int y = 5;y <= 6;y++) {
+                for(int x = 8;x <= 10;x++){
                     if(y == 5) x = 10;
                     Resources.TEXTURES.add(Resources.class.getField("FLOWER" + tileIndex).getInt(null),image.getSubimage(16*x,16*y,16,16));
-                    tileIndex ++;
+                    tileIndex++;
                 }
             }
             // ADDING TREE TILES;
             tileIndex = 1; // Start from TREE1
-            for(int y = 0; y <= 2; y++){
-                for(int x = 6; x <= 7; x++){
+            for(int y = 0;y <= 2;y++){
+                for(int x = 6;x <= 7;x++){
                     Resources.TEXTURES.add(Resources.class.getField("TREE" + tileIndex).getInt(null),image.getSubimage(16*x,16*y,16,16));
-                    tileIndex ++;
+                    tileIndex++;
                 }
             }
             // ADDING HOLE TILE
-            Resources.TEXTURES.add(Resources.HOLE1,image.getSubimage(16 * 8, 16 * 2, 16, 16));
-            Resources.TEXTURES.add(Resources.HOLE2,image.getSubimage(16 * 9, 16 * 2, 16, 16));
+            Resources.TEXTURES.add(Resources.HOLE1,image.getSubimage(16*8, 16*2, 16, 16));
+            Resources.TEXTURES.add(Resources.HOLE2,image.getSubimage(16*9, 16*2, 16, 16));
             // ADDING CAVE TILE
             tileIndex = 1; // Start from CAVE1
-            for(int y = 12; y <= 14; y++){
-                for(int x = 1; x <= 2; x++){
+            for(int y = 12;y <= 14;y++){
+                for(int x = 1;x <= 2;x++){
                     Resources.TEXTURES.add(Resources.class.getField("CAVE" + tileIndex).getInt(null),image.getSubimage(16*x,16*y,16,16));
-                    tileIndex ++;
+                    tileIndex++;
                 }
             }            
             // ADDING WATER INDEX
@@ -122,7 +121,7 @@ public class Loader {
                     // Skip specific coordinates where textures are not defined
                     if ((y == 9 && x == 2) || (y == 10 && x == 2)) continue;
                     Resources.TEXTURES.add(Resources.class.getField("WATER" + tileIndex).getInt(null),image.getSubimage(16 * x, 16 * y, 16, 16));
-                    tileIndex ++;
+                    tileIndex++;
                 }
             }
             tileIndex = 15; // Start from WATER15
@@ -134,7 +133,7 @@ public class Loader {
             }
             // ADDING GATE TILE
             for(int i = 4; i < 8;i++){
-                for(int j = 0; j < 4;j++){
+                for(int j = 0;j < 4;j++){
                     if((i == 5 || i == 6) && (j == 1 || j == 2)) continue;
                     Resources.TEXTURES.add(image.getSubimage(16 * j, 16 * i, 16, 16));
                 }

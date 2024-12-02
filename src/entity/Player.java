@@ -12,7 +12,7 @@ public class Player extends Entity{
 	public Player(int x,int y,int delayTime, int frameCount, byte imgID, float speed) {
 		super(x,y,Vector.Up, delayTime, frameCount, imgID, speed);
 		// TODO Auto-generated constructor stub
-		hp = 20;
+		hp = 1000;
 		mp = 30;
 		def = 0;
 		QTime = 0;
@@ -20,9 +20,9 @@ public class Player extends Entity{
 		ETime = 0;
 		freezeTime=0;
 		damTime=0;
-		q = new QSkill(0,0,Vector.Up, 1,1,Resources.Q,0);
-		r = new RSkill(0,0,Vector.Up, 10,1,Resources.R,10);
-		e = new ESkill(0,0,Vector.Up,10,1,Resources.E,10);
+		q = new QSkill(0,0,Vector.Down, 1,1,Resources.Q,0);
+		r = new RSkill(0,0,Vector.Down, 1,1,Resources.R,10);
+		e = new ESkill(0,0,Vector.Down,1,1,Resources.E,10);
 	}
 	
 	private static final long serialVersionUID = 1L;
@@ -60,7 +60,7 @@ public class Player extends Entity{
 	public void AttackQ() {
 		if(QTime==0) { 
 			
-		QTime=10;
+		QTime=20;
 		q.SetExistTime(5);// thời gian tồn tại trên màn hình(10 vòng lặp)
 		q.SetTransform(new Vector(this.x + facing.x*this.height, this.y + facing.y*this.width), new Vector(Tile.size,Tile.size));
 		q.SetFacing(this.facing);
@@ -69,7 +69,7 @@ public class Player extends Entity{
 	public void AttackR() {
 		if(mp > 0) {
 		if(RTime==0) {
-			RTime=10;
+			RTime=100;
 			mp--;
 			r.SetExistTime(50);
 			r.SetTransform(new Vector(this.x + facing.x*this.height, this.y + facing.y*this.width), new Vector(Tile.size,Tile.size));
@@ -82,7 +82,7 @@ public class Player extends Entity{
 	public void AttackE() {
 		if(mp > 0) {
 		if(ETime==0) {
-			ETime=10;
+			ETime=100;
 			mp--;
 			e.SetExistTime(50);
 			e.SetTransform(new Vector(this.x + facing.x*this.height, this.y + facing.y*this.width), new Vector(Tile.size,Tile.size));
@@ -161,9 +161,9 @@ public class Player extends Entity{
 		}	
 		super.Render(g);
 		if(damTime > 0) g.drawImage(Resources.TEXTURES.get(Resources.BLOOD), this.x, this.y, Tile.size, Tile.size, null);
-		q.Render(g);
-		r.Render(g);
-		e.Render(g);
+		if(QTime>0)q.Render(g);
+		if(RTime>0)r.Render(g);
+		if(ETime>0)e.Render(g);
 	}
 	public void SetRoom(Room room) {
 		this.room=room;

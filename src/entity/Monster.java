@@ -39,6 +39,9 @@ public class Monster extends Enemy{
 	protected int curATime; 
 	protected int bloodTime = 0;
 	protected int baseHP;
+	public boolean isFrozen() {
+        return freeze;
+    }
 	public void DecreaseTime() {
 		super.DecreaseTime();
 		if(curATime>0) {
