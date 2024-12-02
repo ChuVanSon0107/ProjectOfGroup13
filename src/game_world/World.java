@@ -3,7 +3,7 @@ package game_world;
 
 import entity.ADFire;
 import entity.ADFreeze;
-import entity.Boss;
+
 import entity.Item;
 import entity.Monster;
 import entity.Player;
@@ -64,6 +64,7 @@ public class World {
 						{68, 47, 66, 52, 58, 68, 69, 70, 59, 60, 61, 61, 60, 62, 68, 69},
 						{69, 51, 52, 63, 68, 69, 70, 74, 69, 70, 68, 69, 70, 69, 69, 70},
 					}),
+
 				new Room(new int[][] {
 						{68, 69, 70, 71, 68, 108, 109, 110, 109, 110, 109, 111, 68, 69, 70, 71},
 						{68, 69, 70, 71, 68, 112, 72, 47, 48, 50, 72, 113, 69, 69, 70, 71},
@@ -91,9 +92,6 @@ public class World {
 		if(MainMenu.getLevel() == 0) {
 			 // room 0
 
-			 	//add Boss
-				rooms[0].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD, 0, rooms[0], 20, true, 0, 25));
-
 
 	    	   rooms[0].getEnemies().add(new Monster(4, 2, Vector.Up, 2, 2, Resources.MONSTER1,Resources.MONSTER1_ATTACK, 1, rooms[0], 40, false, 1, 20));
 	    	   rooms[0].getEnemies().add(new Monster(10, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[0], 40, true, 1, 20));
@@ -117,8 +115,7 @@ public class World {
 	    	   rooms[3].getEnemies().add(new Monster(10, 3, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[3], 40, true, 1, 20));
 	    	   rooms[3].getEnemies().add(new Item(2, 6, 0, 0, Resources.ITEM, 0, rooms[3]));
 	    	   //room 4
-	    	
-
+			 
 	    	   
 	    	 
 

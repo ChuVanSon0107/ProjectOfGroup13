@@ -103,16 +103,16 @@ public class Boss extends Monster {
 
         fire.SetFacing(v);
         fire.x = this.x;
-        fire.y = this.y + Tile.size;
+        fire.y = this.y;
         fire.SetAlive(true);
-        fire.SetExistTime(120);
+        fire.SetExistTime(200);
 
 
         ice.SetFacing(v);
         ice.x = this.x;
-        ice.y = this.y + Tile.size * 3;
+        ice.y = this.y + Tile.size;
         ice.SetAlive(true);
-        ice.SetExistTime(120);
+        ice.SetExistTime(200);
     }
 
     @Override
