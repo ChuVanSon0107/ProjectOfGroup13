@@ -18,15 +18,14 @@ public class Monster extends Enemy{
 	 */
 	private static final long serialVersionUID = 1L;
 	public Monster(int x,int y,Vector facing, int delayTime, int frameCount, byte imgID,  byte attackID, float speed, Room room, int hp, boolean freeze, int damage, int attackTime) {
-		super(x,y,facing, delayTime, frameCount, imgID, speed, room);
-		// TODO Auto-generated constructor stub
-		this.hp=hp;
-		this.freeze=freeze;
+		super(x, y, facing, delayTime, frameCount, imgID, speed, room);
+		this.hp = hp;
+		this.freeze = freeze;
 		this.damage = damage;
-		this.AttackTime=attackTime;
-		this.attackID=attackID;
-		this.moveID=imgID;
-		curATime=attackTime;
+		this.AttackTime = attackTime;
+		this.attackID = attackID;
+		this.moveID = imgID;
+		curATime = attackTime;
 		baseHP = hp;
 	}
 	protected int stunTime = 0;
@@ -39,42 +38,45 @@ public class Monster extends Enemy{
 	protected int curATime; 
 	protected int bloodTime = 0;
 	protected int baseHP;
+
 	public boolean isFrozen() {
         return freeze;
     }
+
 	public void DecreaseTime() {
 		super.DecreaseTime();
-		if(curATime>0) {
+		if(curATime > 0) {
 			curATime--;
-		}if(stunTime>0)
+		}if(stunTime > 0)
 			stunTime--;
 	}
 	protected void Attack() {
 		
 		
-		if(curATime==0) {
+		if(curATime == 0) {
 			player.TakeHP(-damage);
-			curATime=AttackTime;
+			curATime = AttackTime;
 		}
 	}
 	public void CollisionPlayer() {
-		Rectangle r= this.intersection(player);
+		Rectangle r = this.intersection(player);
 		if(r.isEmpty() || r.width * r.height < 20 ) {
 			imgID = moveID;
-			super.frameCount=2;
+			super.frameCount = 2;
 			return;
 		}
 		super.imgID = attackID;
-		super.frameCount=1;
+		super.frameCount = 1;
 		Attack();
 		if(freeze) {
 			player.SetFreezeTime(100);
 			SetAlive(false);
 		}
-	}public void CollisionQ() {
+	}
+	public void CollisionQ() {
 		
-		if(stunTime==0) {
-			Rectangle r= this.intersection(player.GetQPos());
+		if(stunTime == 0) {
+			Rectangle r = this.intersection(player.GetQPos());
 			if(r.isEmpty())return;
 			bloodTime = 20;
 			stunTime = 20;
@@ -88,7 +90,8 @@ public class Monster extends Enemy{
 		// Kiểm tra nếu quái là quái băng
 		if (freeze) {
 			TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái băng
-		} else {
+		} 
+		else {
 			// Nếu không phải quái băng, tức là quái lửa
 			TakeDamage(5); // Hồi máu cho quái lửa
 		}
@@ -101,26 +104,27 @@ public class Monster extends Enemy{
 		// Kiểm tra nếu quái là quái băng
 		if (freeze) {
 			TakeDamage(5); // Hồi máu cho quái băng
-		} else {
+		} 
+		else {
 			// Nếu không phải quái băng, tức là quái lửa
 			TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
 		}
 	}
 	
 	protected void TakeDamage(int amount) {
-		hp+=amount;
-		if(hp<=0)SetAlive(false);
+		hp += amount;
+		if(hp <= 0) SetAlive(false);
 	}
 	public void OnLoop() {
 		AnimationDisplay();
 		DecreaseTime();
-		if(stunTime==0) {
+		if(stunTime == 0) {
 			if(MainMenu.getLevel()>0)
 				BFSMove();
 			else Move();
 		}
-		for(int i=0;i<Room.Ysize;i++) {
-			for(int j=0;j<Room.Xsize;j++) {
+		for(int i = 0; i < Room.Ysize; i++) {
+			for(int j = 0; j<Room.Xsize; j++) {
 				super.CollisionWall(room.GetTile(i, j));
 			}
 		}
@@ -134,22 +138,24 @@ public class Monster extends Enemy{
 		float angCoeff = ((float) this.player.y - (float) super.y) / ((float) this.player.x - (float) super.x);
 		if(angCoeff < 1 && angCoeff > -1) {
 			if(this.player.x < super.x) {
-				facing=Vector.Left;
+				facing = Vector.Left;
 			} else {
-				facing= Vector.Right;
+				facing = Vector.Right;
 			}
 		}
 		else if(angCoeff > 1 || angCoeff < -1) {
 			if(this.player.y < super.y) {
 				facing =Vector.Up;
-			} else {
+			} 
+			else {
 				facing = Vector.Down;
 			}
 		}
 		else {
 			if(this.player.x < super.x) {
 				facing = Vector.Left;
-			} else {
+			} 
+			else {
 				facing = Vector.Right;
 			}
 		}
@@ -166,14 +172,14 @@ public class Monster extends Enemy{
 			g.drawImage(Resources.TEXTURES.get(Resources.BLOOD), super.x, super.y, Tile.size, Tile.size, null);
 		}
 		
-			g.drawImage(Resources.TEXTURES.get(Resources.ARMORB), x, y - 10, 50, 5, null);
-			g.drawImage(Resources.TEXTURES.get(Resources.HEARTB), x, y - 10, 50*hp/baseHP, 5, null);
+		g.drawImage(Resources.TEXTURES.get(Resources.ARMORB), x, y - 10, 50, 5, null);
+		g.drawImage(Resources.TEXTURES.get(Resources.HEARTB), x, y - 10, 50*hp/baseHP, 5, null);
 		
 		
 	}
 	public void BFSMove() {
 		
-		if(super.x % Tile.size==0 && super.y % Tile.size==0) {
+		if(super.x % Tile.size == 0 && super.y % Tile.size == 0) {
 			System.out.println("BFS");
 			BFS bfs = new BFS(room.GetTiles());
 			facing = bfs.FindNextNode(super.y / Tile.size, super.x / Tile.size, player.y / Tile.size, player.x / Tile.size);
