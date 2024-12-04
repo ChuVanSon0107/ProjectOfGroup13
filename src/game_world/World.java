@@ -4,6 +4,7 @@ import javax.swing.text.html.parser.Entity;
 
 import entity.ADFire;
 import entity.ADFreeze;
+import entity.Boss;
 import entity.Enemy;
 import entity.Item;
 import entity.Monster;
@@ -89,6 +90,15 @@ public class World {
 		player.SetRoom(rooms[0]);
 		// ADDING PRINCESS
 		rooms[4].getPrincesses().add(new Princess(8,2,640,1,Resources.PRINCESS1,0));
+
+		//BOSS ĐOẠN THÌ  FIX SAU
+
+		rooms[0].getEnemies().add(new Monster(4, 2, Vector.Up, 2, 1, Resources.MONSTER1,Resources.MONSTER_ATTACK, 1, rooms[0], 100, false, 1, 20));
+	    rooms[0].getEnemies().add(new Monster(10, 2, Vector.Up, 2, 1, Resources.MONSTER,Resources.MONSTER_ATTACK, 1, rooms[0], 100, true, 1, 20));
+		rooms[0].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
+
+		//
+
 		if(MainMenu.getLevel() == 0) {
 			 // room 0
 			 	/* 

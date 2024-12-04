@@ -13,6 +13,6 @@ public class Princess extends Entity{
     }
     @Override
     public void Render(Graphics g) {
-		g.drawImage(Resources.TEXTURES.get(imgID + curFrame), x, y, width + 24, height + 24, null);
+		g.drawImage(Resources.TEXTURES.get(Resources.PRINCESS1), x, y, width + 24, height + 24, null);
 	}
 }
