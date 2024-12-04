@@ -149,7 +149,6 @@ public class Resources {
 
 		// PRINCESS
 		public static final int PRINCESS1 = 122;
-		public static final int PRINCESS2 = 123;
 
 
 	    public static ArrayList<BufferedImage> TEXTURES = new ArrayList<>();

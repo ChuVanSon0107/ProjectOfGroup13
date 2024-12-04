@@ -91,7 +91,7 @@ public class World {
 		rooms[4].getPrincesses().add(new Princess(8,2,640,1,Resources.PRINCESS1,0));
 		if(MainMenu.getLevel() == 0) {
 			 // room 0
-			
+			 	/* 
 	    	   rooms[0].getEnemies().add(new Monster(4, 2, Vector.Up, 2, 2, Resources.MONSTER1,Resources.MONSTER1_ATTACK, 1, rooms[0], 40, false, 1, 20));
 	    	   rooms[0].getEnemies().add(new Monster(10, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[0], 40, true, 1, 20));
 	    	   // room 1
@@ -100,13 +100,11 @@ public class World {
 	    	   rooms[1].getEnemies().add(new ADFire(13, 3, Vector.Up, 2, 2, Resources.AD1, 3, rooms[1], 20, false, 0, 25));
 	    	   rooms[1].getEnemies().add(new Item(14, 3, 0, 0, Resources.ITEM, 0, rooms[1]));
 	    	   // room 2
-	    	   
 	    	   rooms[2].getEnemies().add(new ADFreeze(5, 1, Vector.Up, 2, 2, Resources.AD, 3, rooms[2], 20, true, 0, 50));
 	    	   rooms[2].getEnemies().add(new ADFire(10, 3, Vector.Up, 2, 2, Resources.AD1, 3, rooms[2], 20, false, 0, 50));
 	    	   rooms[2].getEnemies().add(new Monster(11, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[2], 40, true, 1, 20));
 	    	   rooms[2].getEnemies().add(new Monster(11, 2, Vector.Up, 2, 2, Resources.MONSTER1, Resources.MONSTER1_ATTACK, 1, rooms[2], 40, false, 1, 20));
 	    	   // room 3
-	    	   
 	    	   //rooms[3].getEnemies().add(new Ghost(2, 3, Vector.Up, 2, 2, Resources.GHOST,Resources.GHOST_ATTACK, 2, rooms[3], 10, false, 1, 200));
 	    	   rooms[3].getEnemies().add(new ADFire(9, 1, Vector.Up, 2, 2, Resources.AD1, 3, rooms[3], 20, false, 0, 50));
 	    	   rooms[3].getEnemies().add(new ADFreeze(12, 3, Vector.Up, 2, 2, Resources.AD, 3, rooms[3], 20, true, 0, 50));
@@ -114,11 +112,7 @@ public class World {
 	    	   rooms[3].getEnemies().add(new Monster(10, 3, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[3], 40, true, 1, 20));
 	    	   rooms[3].getEnemies().add(new Item(2, 6, 0, 0, Resources.ITEM, 0, rooms[3]));
 	    	   //room 4
-	    	
-
-	    	   
-	    	 
-
+			   /* */
 		}
 		else {
 			 // room 0
@@ -146,7 +140,6 @@ public class World {
 	    	   rooms[3].getEnemies().add(new Item(2, 6, 0, 0, Resources.ITEM, 0, rooms[3]));
 	    	   //room 4
 
-		
 			   }
 		
 	}
