@@ -145,6 +145,7 @@ public class Loader {
             Resources.TEXTURES.add(Resources.STORYMENU, ImageIO.read(getClass().getResource("/image/storyMenu.jpg")));
             // ADDING PRINCESS
             Resources.TEXTURES.add(ImageIO.read(getClass().getResource("/image/Idle_South_0.png")));
+            //Resources.TEXTURES.add(ImageIO.read(getClass().getResource("/image/princess.png")));
             Resources.TEXTURES.add(ImageIO.read(getClass().getResource("/image/Jump_South_0.png")));
 
         }catch (Exception e) {
