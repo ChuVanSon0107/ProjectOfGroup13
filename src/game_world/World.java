@@ -14,7 +14,7 @@ import game_state.MainMenu;
 import resources.Resources;
 
 public class World {
-	public static final int count = 5;
+	public static final int count = 6;
 	private Room[] rooms;
 	private Player player;
 	private int curRoom = 0;
@@ -45,15 +45,15 @@ public class World {
 				{68, 69, 70, 71, 68, 51, 52, 53, 54, 69, 70, 71, 68, 69, 70, 71},
 				  }),
 				new Room(new int[][]{
-						{68, 94, 95, 98, 95, 96, 68, 69, 70, 71, 68, 70, 68, 71, 68, 71},
-						{70, 97, 95, 104, 105, 106, 91, 92, 91, 92, 91, 92, 91, 92, 93, 70},
-						{68, 94, 95, 106, 107, 95, 98, 95, 98, 95, 104, 105, 98, 95, 96, 68},
-						{70, 97, 98, 95, 95, 95, 98, 95, 98, 95, 106, 107, 98, 95, 96, 70},
-						{68, 94, 95, 98, 95, 104, 101, 102, 101, 102, 101, 102, 105, 95, 96, 68},
-						{70, 97, 95, 98, 95, 99, 68, 69, 70, 69, 69, 90, 107, 95, 99, 69},
-						{68, 100, 101, 102, 101, 103, 69, 90, 92, 91, 92, 107, 95, 98, 96, 68},
-						{68, 69, 70, 71, 69, 68, 69, 94, 98, 95, 98, 104, 101, 102, 103, 68},
-						{68, 69, 70, 71, 69, 68, 68, 94, 98, 95, 104, 103, 68, 69, 70, 71},
+					{68, 94, 95, 98, 95, 96, 68, 69, 70, 71, 68, 70, 68, 71, 68, 71},
+					{70, 97, 95, 104, 105, 106, 91, 92, 91, 92, 91, 92, 91, 92, 93, 70},
+					{68, 94, 95, 106, 107, 95, 98, 95, 98, 95, 104, 105, 98, 95, 96, 68},
+					{70, 97, 98, 95, 95, 95, 98, 95, 98, 95, 106, 107, 98, 95, 96, 70},
+					{68, 94, 95, 98, 95, 104, 101, 102, 101, 102, 101, 102, 105, 95, 96, 68},
+					{70, 97, 95, 98, 95, 99, 68, 69, 70, 69, 69, 90, 107, 95, 99, 69},
+					{68, 100, 101, 102, 101, 103, 69, 90, 92, 91, 92, 107, 95, 98, 96, 68},
+					{68, 69, 70, 71, 69, 68, 69, 94, 98, 95, 98, 104, 101, 102, 103, 68},
+					{68, 69, 70, 71, 69, 68, 68, 94, 98, 95, 104, 103, 68, 69, 70, 71},
 					}),
 				new Room(new int[][]{
 						{68, 69, 68, 70, 68, 69, 68, 70, 68, 69, 68, 70, 51, 54, 68, 70},
@@ -66,6 +66,17 @@ public class World {
 						{68, 47, 66, 52, 58, 68, 69, 70, 59, 60, 61, 61, 60, 62, 68, 69},
 						{69, 51, 52, 63, 68, 69, 70, 74, 69, 70, 68, 69, 70, 69, 69, 70},
 					}),
+				new Room(new int[][]{
+					{68,69,70,71,68,69,55,56,57,58,68,70,71,68,69,70,71},
+					{69,47,48,49,49,48,66,52,53,65,48,49,48,49,50,68},
+					{70,55,52,53,56,57,52,53,57,56,56,57,52,53,54,69},
+					{71,55,52,53,56,57,52,53,57,56,56,57,52,53,58,70},
+					{70,55,52,53,56,57,52,53,57,56,56,57,52,53,58,69},
+					{71,55,52,53,56,57,52,53,57,56,56,57,52,53,58,68},
+					{68,55,52,53,56,57,52,53,57,56,56,57,52,53,58,68},
+					{69,59,60,61,60,61,64,56,57,63,60,61,60,61,62,69},
+					{68,69,70,71,68,69,51,52,53,54,68,70,71,68,69,70,71},
+				}),
 				new Room(new int[][] {
 						{68, 69, 70, 71, 68, 108, 109, 110, 109, 110, 109, 111, 68, 69, 70, 71},
 						{68, 69, 70, 71, 68, 112, 72, 47, 48, 50, 72, 113, 69, 69, 70, 71},
@@ -87,9 +98,9 @@ public class World {
 		for(Room room : rooms) {
 			room.SetPlayer(player);
 		}
-		player.SetRoom(rooms[0]);
+		player.SetRoom(rooms[4]);
 		// ADDING PRINCESS
-		rooms[4].getPrincesses().add(new Princess(8,2,640,1,Resources.PRINCESS1,0));
+		rooms[5].getPrincesses().add(new Princess(8,2,640,1,Resources.PRINCESS1,0));
 
 		//BOSS ĐOẠN THÌ  FIX SAU
 
@@ -122,7 +133,11 @@ public class World {
 	    	   rooms[3].getEnemies().add(new Monster(10, 3, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[3], 40, true, 1, 20));
 	    	   rooms[3].getEnemies().add(new Item(2, 6, 0, 0, Resources.ITEM, 0, rooms[3]));
 	    	   //room 4
+				rooms[0].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
+
 			   /* */
+			   rooms[4].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
+
 		}
 		else {
 			 // room 0
@@ -156,29 +171,33 @@ public class World {
 	public void ChangeRoom() {
 		int x = (int) player.getX() / 50;
 		int y = (int) player.getY() / 50;
-		System.out.println(player.getPrevPositionX() + " " + player.getPrevPositionY());
+		System.out.println(rooms[4].getEnemies().get(0).GetAlive());
 		if ((rooms[curRoom].GetTile(y,x).getID() >= Resources.CAVE1 &&  rooms[curRoom].GetTile(y,x).getID() <= Resources.CAVE6)
 			|| player.getCenterY() < rooms[curRoom].GetTile(0, 0).y) {
 			curRoom++;
 			player.savePrevPosition(x, y + 1);
-			if(curRoom == count) {	
-				return;
-			}
+			if(curRoom == count) {return;}
 			switch (curRoom) {
-				case 1: player.setPosition(7*50, 8*50);
-					break;
-				case 2: player.setPosition(7*50, 8*50);
-					break;
-				case 3: player.setPosition(2*50, 8*50);
-					break;
-				case 4: player.setPosition(7*50, 8*50);
+				case 1: player.setPosition(7*50, 8*50); break;
+				case 2: player.setPosition(8*50, 8*50); break;
+				case 3: player.setPosition(2*50, 8*50); break;
+				case 4: player.setPosition(7*50, 7*50); break;
+				case 5: {
+					if(rooms[4].getEnemies().get(0).GetAlive() == false) player.setPosition(7*50, 7*50);
+					else{
+						curRoom = 4;
+						player.setPosition(7*50, 5*50);
+					}
+				}
 			}
+			player.SetFacing(Vector.Up);
 			player.SetRoom(rooms[curRoom]);
 			player.GetRPos().SetExistTime(0);
 		}
 		else if (player.getCenterY() > rooms[curRoom].GetTile(Room.Ysize-1, 0).y + Tile.size) {
 			curRoom--;
-			player.setPosition(player.getPrevPositionX()*50, player.getPrevPositionY()*50);
+			if(curRoom == 0 || curRoom == 1) player.setPosition(7*50, 3*50);
+			else player.setPosition((player.getPrevPositionX())*50, (player.getPrevPositionY())*50);
 			player.SetRoom(rooms[curRoom]);
 			player.GetRPos().SetExistTime(0);
 		}
