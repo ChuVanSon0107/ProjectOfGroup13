@@ -171,7 +171,7 @@ public class World {
 	public void ChangeRoom() {
 		int x = (int) player.getX() / 50;
 		int y = (int) player.getY() / 50;
-		System.out.println(rooms[4].getEnemies().get(0).GetAlive());
+		//System.out.println(rooms[4].getEnemies().get(0).GetAlive());
 		if ((rooms[curRoom].GetTile(y,x).getID() >= Resources.CAVE1 &&  rooms[curRoom].GetTile(y,x).getID() <= Resources.CAVE6)
 			|| player.getCenterY() < rooms[curRoom].GetTile(0, 0).y) {
 			curRoom++;

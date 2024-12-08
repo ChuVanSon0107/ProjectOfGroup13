@@ -59,7 +59,7 @@ public class PauseMenu extends GameState{
 			case KeyEvent.VK_ENTER:
 				switch (this.optionsMenu[selected]){
 					case CONTINUE_GAME:
-						gameStateManager.setCurState(1);
+						gameStateManager.setCurState(3);
 						System.out.print("Continue\n");
 						break;
 					case QUIT_GAME:
