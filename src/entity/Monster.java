@@ -71,7 +71,12 @@ public class Monster extends Enemy{
 			player.SetFreezeTime(100);
 			SetAlive(false);
 		}
-	}public void CollisionQ() {
+	}
+
+	//add
+	public int countExist = 10;
+
+	public void CollisionQ() {
 		
 		if(stunTime==0) {
 			Rectangle r= this.intersection(player.GetQPos());
@@ -92,6 +97,14 @@ public class Monster extends Enemy{
 			// Nếu không phải quái băng, tức là quái lửa
 			TakeDamage(5); // Hồi máu cho quái lửa
 		}
+
+		//ADD
+		if(countExist == 0){
+			player.GetRPos().SetAlive(false);
+
+		}
+		countExist --;
+
 	}
 	
 	public void CollisionE() {
@@ -105,6 +118,13 @@ public class Monster extends Enemy{
 			// Nếu không phải quái băng, tức là quái lửa
 			TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
 		}
+
+
+		if(countExist == 0){
+			player.GetEPos().SetAlive(false);
+
+		}
+		countExist --;
 	}
 	
 	protected void TakeDamage(int amount) {
