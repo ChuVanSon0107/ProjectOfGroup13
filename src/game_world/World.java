@@ -136,9 +136,9 @@ public class World {
 				rooms[0].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
 
 			   /* */
-			   rooms[4].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
-			   rooms[4].getEnemies().add(new Boss(12, 4, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
-			   rooms[4].getEnemies().add(new Boss(11, 5, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(10, 10, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(15, 15, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(6, 6, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
 
 		}
 		else {

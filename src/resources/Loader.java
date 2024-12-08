@@ -148,6 +148,10 @@ public class Loader {
             Resources.TEXTURES.add(Resources.PRINCESS1, ImageIO.read(getClass().getResource("/image/Idle_South_0.png")));
             Resources.TEXTURES.add(Resources.PRINCESS2, ImageIO.read(getClass().getResource("/image/Idle_South_0.png")));
 
+            Resources.TEXTURES.add(Resources.BOSS, ImageIO.read(getClass().getResource("/image/ghost_invi.png")));
+            Resources.TEXTURES.add(Resources.BOSS, ImageIO.read(getClass().getResource("/image/ghost_invi2.png")));
+
+            
         }catch (Exception e) {
         		System.out.print("Load Failed\n");
                 e.printStackTrace();
