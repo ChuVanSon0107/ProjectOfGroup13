@@ -136,7 +136,9 @@ public class World {
 				rooms[0].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
 
 			   /* */
-			   rooms[4].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(10, 10, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(15, 15, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(6, 6, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
 
 		}
 		else {
@@ -171,7 +173,7 @@ public class World {
 	public void ChangeRoom() {
 		int x = (int) player.getX() / 50;
 		int y = (int) player.getY() / 50;
-		//System.out.println(rooms[4].getEnemies().get(0).GetAlive());
+		//System.out.println(rooms[0].isAllAlive());
 		if ((rooms[curRoom].GetTile(y,x).getID() >= Resources.CAVE1 &&  rooms[curRoom].GetTile(y,x).getID() <= Resources.CAVE6)
 			|| player.getCenterY() < rooms[curRoom].GetTile(0, 0).y) {
 			curRoom++;
@@ -183,7 +185,7 @@ public class World {
 				case 3: player.setPosition(2*50, 8*50); break;
 				case 4: player.setPosition(7*50, 7*50); break;
 				case 5: {
-					if(rooms[4].getEnemies().get(0).GetAlive() == false) player.setPosition(7*50, 7*50);
+					if(rooms[4].isAllAlive()) player.setPosition(7*50, 7*50);
 					else{
 						curRoom = 4;
 						player.setPosition(7*50, 5*50);

@@ -44,18 +44,4 @@ public class QSkill extends Entity{
 		super.height = (int)size.y;
 	}
 
-	//Add
-	private boolean alive = true;
-	public void SetAlive(boolean alive) {
-		this.alive=alive;
-	}
-	public boolean GetAlive() {
-		return alive;
-	}
-	@Override
-	public void Render(Graphics g){
-		if(GetAlive()){
-			super.Render(g);
-		}
-	}
 }

@@ -52,10 +52,14 @@ public class Room {
 	}
 	public void Loop() {
 		for(Enemy enemy : enemies) {
-			if(enemy.GetAlive())
-			enemy.OnLoop();
-			
+			if(enemy.GetAlive()) enemy.OnLoop();
 		}
+	}
+	public boolean isAllAlive(){
+			for(Enemy enemy : enemies){
+				if(enemy.GetAlive()) return false;
+			}
+			return true;
 	}
 	public ArrayList<Enemy> getEnemies() {
 		return enemies;

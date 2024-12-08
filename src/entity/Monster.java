@@ -98,12 +98,6 @@ public class Monster extends Enemy{
 			TakeDamage(5); // Hồi máu cho quái lửa
 		}
 
-		//ADD
-		if(countExist == 0){
-			player.GetRPos().SetAlive(false);
-
-		}
-		countExist --;
 
 	}
 	
@@ -120,11 +114,6 @@ public class Monster extends Enemy{
 		}
 
 
-		if(countExist == 0){
-			player.GetEPos().SetAlive(false);
-
-		}
-		countExist --;
 	}
 	
 	protected void TakeDamage(int amount) {

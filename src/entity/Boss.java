@@ -79,7 +79,7 @@ public class Boss extends Monster{
 				}
 			}	
 		}else {
-			imgID = Resources.AD;
+			imgID = Resources.BOSS;
 			frameCount = 1;
 		}
 		if(b.GetAlive())b.OnLoop();
