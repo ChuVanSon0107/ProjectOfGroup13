@@ -17,7 +17,7 @@ public class Loader {
         	Resources.TEXTURES.add(Resources.TILE,image.getSubimage(16*1, 16*5, 16, 16));
     		Resources.TEXTURES.add(Resources.WALL, ImageIO.read(getClass().getResource("/image/wall.png")));
     		Resources.TEXTURES.add(Resources.WATER, ImageIO.read(getClass().getResource("/image/water.png")));
-    		Resources.TEXTURES.add(Resources.DIRT, ImageIO.read(getClass().getResource("/image/dirt.png")));
+    		Resources.TEXTURES.add(Resources.DIRT, image.getSubimage(16*1, 16*5, 16, 16));
             Resources.TEXTURES.add(Resources.TREE, ImageIO.read(getClass().getResource("/image/tree.png")));
             Resources.TEXTURES.add(Resources.STONE, ImageIO.read(getClass().getResource("/image/stone.png")));
             Resources.TEXTURES.add(Resources.GRASS, ImageIO.read(getClass().getResource("/image/stone.png")));              

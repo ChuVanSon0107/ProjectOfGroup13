@@ -2,6 +2,8 @@ package entity;
 
 import java.util.Random;
 import java.awt.Graphics;
+import java.awt.Rectangle;
+
 import game_world.Room;
 import game_world.Vector;
 import resources.Resources;
@@ -11,9 +13,9 @@ public class Boss extends Monster{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public Boss(int x, int y, Vector facing, int delayTime, int frameCount, byte imgID, byte attackID, float speed, Room room, int hp,
+	public Boss(int x, int y, Vector facing, int delayTime, int frameCount, byte boss, byte bossAttack, float speed, Room room, int hp,
 			boolean freeze, int damage, int attackTime) {
-		super(x,y,facing, delayTime, frameCount, imgID, attackID, speed, room, hp, freeze, damage, attackTime);
+		super(x,y,facing, delayTime, frameCount, boss, bossAttack, speed, room, hp, freeze, damage, attackTime);
 		// TODO Auto-generated constructor stub
 		invisibleTime = 200;
 		b = new firebullet(this.x, this.y, this.facing, 20, 1, Resources.FIREBULLET, 5, room, 2);
@@ -40,6 +42,7 @@ public class Boss extends Monster{
 			curATime=AttackTime;
 		}
 	}
+	
 	protected void AttackAd() {
 		Random r = new Random();
 		int ran = r.nextInt(2);
@@ -58,6 +61,17 @@ public class Boss extends Monster{
 			m.SetExistTime(300);
 		}
 	}
+	public void CollisionR() {
+		Rectangle r = this.intersection(player.GetRPos());
+		if (r.isEmpty()) return;
+		TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái băng
+	}
+	
+	public void CollisionE() {
+		Rectangle e = this.intersection(player.GetEPos());
+		if (e.isEmpty()) return;
+		TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
+	}
 	public void Render(Graphics g) {
 		super.Render(g);
 		if(b.GetAlive())b.Render(g);
@@ -71,8 +85,8 @@ public class Boss extends Monster{
 		super.Move();
 		if(invisibleTime > 100) {
 			super.CollisionQ();
-			super.CollisionE();
-			super.CollisionR();
+			CollisionE();
+			CollisionR();
 			for(int i=0;i<Room.Ysize;i++) {
 				for(int j=0;j<Room.Xsize;j++) {
 					super.CollisionWall(room.GetTile(i, j));
