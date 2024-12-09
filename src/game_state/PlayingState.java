@@ -56,7 +56,7 @@ public class PlayingState extends GameState{
 							"Chúng ta hãy về nhà thôi",
 							"Cảm ơn ngươi ta đến cứu ta",
 							"Ta sẽ dâng nguyện yêu ngươi suốt đời",
-							"Hãy đồng ý lấy ta làm vợ nhá <3 <3",
+							"Hãy đồng ý lấy ta làm chồng nhá <3 <3",
 							"Dạ, ta đồng ý"
 						};
 
