@@ -2,14 +2,10 @@ package entity;
 
 import game_world.Vector;
 
-import java.awt.*;
-
 public class QSkill extends Entity{
 	/**
 	 * 
 	 */
-
-
 	private static final long serialVersionUID = 1L;
 	public QSkill(int x, int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed) {
 		super(x,y,facing, delayTime, frameCount, imgID, speed);
@@ -42,6 +38,5 @@ public class QSkill extends Entity{
 		super.y = (int)pos.y;
 		super.width= (int)size.x;
 		super.height = (int)size.y;
-	}
-
+	}	
 }
