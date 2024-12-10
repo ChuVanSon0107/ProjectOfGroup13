@@ -92,7 +92,9 @@ public class Monster extends Enemy{
 	
 		// Kiểm tra nếu quái là quái băng
 		if (freeze) {
-			TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái băng
+			//TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái băng
+			TakeDamage(-10); // Gây sát thương cho quái băng
+
 		} else {
 			// Nếu không phải quái băng, tức là quái lửa
 			TakeDamage(5); // Hồi máu cho quái lửa
@@ -110,7 +112,9 @@ public class Monster extends Enemy{
 			TakeDamage(5); // Hồi máu cho quái băng
 		} else {
 			// Nếu không phải quái băng, tức là quái lửa
-			TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
+			//TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
+			TakeDamage(-10); // Gây sát thương cho quái lửa
+
 		}
 
 
