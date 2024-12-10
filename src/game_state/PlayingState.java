@@ -39,7 +39,15 @@ public class PlayingState extends GameState{
 				Resources.PLAYER
 		};
 		this.conversation = new Conversation(150, imgIDs, sentences);
+
+
+		bossConversation = false;//add
 	}
+
+
+	private boolean bossConversation = false;//add
+
+
 	@Override
 	public void Loop() {
 		if(this.inConversation == false){
@@ -81,6 +89,30 @@ public class PlayingState extends GameState{
 				}
 			}
 
+			//ADD
+			else if(world.GetCur() == World.count - 2 && bossConversation == false){
+				this.inConversation = true;
+				this.inConversation = true;
+				String[] sentences = new String[]{
+					"Hiệp sĩ ơi, cíu taaaaaaaaaa!!!!!!!",
+					"Với sức mạnh đó cũng đòi đánh bọn ta sao",
+					"Ngươi nghĩ ta không chuẩn bị gì sao",
+					"Thứ vũ khí dùng để khắc chế các ngươi"
+				};
+
+				byte[] imgIDs = new byte[] {
+					Resources.PRINCESS1,
+					Resources.BOSS,
+					Resources.PLAYER,
+					Resources.PLAYER
+				};
+
+				this.conversation = new Conversation(150, imgIDs, sentences);
+				bossConversation = true;
+			}
+
+			//ADD
+
 
 			if(player.getHp() > 0) {
 				Room room = world.GetCurrentRoom();
@@ -95,6 +127,8 @@ public class PlayingState extends GameState{
 				}
 			}
 		}
+
+
 
 		else{
 			if(conversation != null) {

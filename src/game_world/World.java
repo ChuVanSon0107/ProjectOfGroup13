@@ -1,11 +1,10 @@
 package game_world;
 
-import javax.swing.text.html.parser.Entity;
 
 import entity.ADFire;
 import entity.ADFreeze;
 import entity.Boss;
-import entity.Enemy;
+
 import entity.Item;
 import entity.Monster;
 import entity.Player;

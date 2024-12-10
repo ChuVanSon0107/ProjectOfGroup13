@@ -3,12 +3,17 @@ package entity;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+
 import game_world.Room;
 import game_world.Tile;
 import game_world.Vector;
+
 import resources.Resources;
 
 public class Player extends Entity{
+
+
+
 	public Player(int x,int y,int delayTime, int frameCount, byte imgID, float speed) {
 		super(x,y,Vector.Up, delayTime, frameCount, imgID, speed);
 		// TODO Auto-generated constructor stub
@@ -23,7 +28,11 @@ public class Player extends Entity{
 		q = new QSkill(0,0,Vector.Down, 1,1,Resources.Q,0);
 		r = new RSkill(0,0,Vector.Down, 1,1,Resources.R,10);
 		e = new ESkill(0,0,Vector.Down,1,1,Resources.E,10);
-	}
+
+
+	}	
+
+
 	
 	private static final long serialVersionUID = 1L;
 	private int hp;
