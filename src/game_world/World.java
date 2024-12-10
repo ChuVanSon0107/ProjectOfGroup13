@@ -116,9 +116,9 @@ public class World {
 	    	   rooms[0].getEnemies().add(new Monster(4, 2, Vector.Up, 2, 2, Resources.MONSTER1,Resources.MONSTER1_ATTACK, 1, rooms[0], 40, false, 1, 20));
 	    	   rooms[0].getEnemies().add(new Monster(10, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[0], 40, true, 1, 20));
 	    	   // room 1
-	    	   rooms[1].getEnemies().add(new Monster(3, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 2, rooms[1], 10, true, 1, 20));
-	    	   rooms[1].getEnemies().add(new ADFreeze(12, 3, Vector.Up, 2, 2, Resources.AD, 3, rooms[1], 20, true, 0, 25));
-	    	   rooms[1].getEnemies().add(new ADFire(13, 3, Vector.Up, 2, 2, Resources.AD1, 3, rooms[1], 20, false, 0, 25));
+	    	   rooms[1].getEnemies().add(new Monster(3, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 2, rooms[1], 100, true, 1, 20));
+	    	   rooms[1].getEnemies().add(new ADFreeze(12, 3, Vector.Up, 2, 2, Resources.AD, 3, rooms[1], 150, true, 0, 50));
+	    	   rooms[1].getEnemies().add(new ADFire(13, 3, Vector.Up, 2, 2, Resources.AD1, 3, rooms[1], 150, false, 0, 50));
 	    	   rooms[1].getEnemies().add(new Item(14, 3, 0, 0, Resources.ITEM, 0, rooms[1]));
 	    	   // room 2
 	    	   rooms[2].getEnemies().add(new ADFreeze(5, 1, Vector.Up, 2, 2, Resources.AD, 3, rooms[2], 20, true, 0, 50));
@@ -133,12 +133,10 @@ public class World {
 	    	   rooms[3].getEnemies().add(new Monster(10, 3, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[3], 40, true, 1, 20));
 	    	   rooms[3].getEnemies().add(new Item(2, 6, 0, 0, Resources.ITEM, 0, rooms[3]));
 	    	   //room 4
-				rooms[0].getEnemies().add(new Boss(10, 3, Vector.Up, 2, 2, Resources.AD,Resources.AD, 1, rooms[0], 150, false, 1, 150));
-
 			   /* */
-			   rooms[4].getEnemies().add(new Boss(10, 10, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
-			   rooms[4].getEnemies().add(new Boss(15, 15, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
-			   rooms[4].getEnemies().add(new Boss(6, 6, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 1000, false, 1, 150));
+			   //rooms[4].getEnemies().add(new Boss(10, 10, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 700, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(15, 15, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 700, false, 1, 150));
+			   rooms[4].getEnemies().add(new Boss(6, 6, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 700, false, 1, 150));
 
 		}
 		else {
@@ -166,7 +164,9 @@ public class World {
 	    	   rooms[3].getEnemies().add(new Monster(10, 3, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[3], 40, true, 1, 20));
 	    	   rooms[3].getEnemies().add(new Item(2, 6, 0, 0, Resources.ITEM, 0, rooms[3]));
 	    	   //room 4
-
+			    rooms[4].getEnemies().add(new Boss(10, 10, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 700, false, 1, 150));
+			    rooms[4].getEnemies().add(new Boss(15, 15, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 700, false, 1, 150));
+			    rooms[4].getEnemies().add(new Boss(6, 6, Vector.Up, 2, 2, Resources.BOSS,Resources.BOSS, 1, rooms[4], 700, false, 1, 150));
 			   }
 		
 	}

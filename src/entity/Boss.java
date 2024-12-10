@@ -59,7 +59,9 @@ public class Boss extends Monster{
 		}
 	}
 	public void Render(Graphics g) {
-		super.Render(g);
+		if(invisibleTime > 100){
+			super.Render(g);
+		}
 		if(b.GetAlive())b.Render(g);
 		if(m.GetAlive())m.Render(g);
 	}
