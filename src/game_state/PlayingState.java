@@ -81,6 +81,7 @@ public class PlayingState extends GameState{
 				}
 			}
 
+
 			if(player.getHp() > 0) {
 				Room room = world.GetCurrentRoom();
 				room.Loop();

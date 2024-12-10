@@ -115,8 +115,8 @@ public class World {
 	    	   rooms[0].getEnemies().add(new Monster(10, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 1, rooms[0], 100, true, 1, 20));
 	    	   // room 1
 	    	   rooms[1].getEnemies().add(new Monster(3, 2, Vector.Up, 2, 2, Resources.MONSTER, Resources.MONSTER_ATTACK, 2, rooms[1], 100, true, 1, 20));
-	    	   rooms[1].getEnemies().add(new ADFreeze(12, 3, Vector.Up, 2, 2, Resources.AD, 3, rooms[1], 150, true, 0, 25));
-	    	   rooms[1].getEnemies().add(new ADFire(13, 3, Vector.Up, 2, 2, Resources.AD1, 3, rooms[1], 150, false, 0, 25));
+	    	   rooms[1].getEnemies().add(new ADFreeze(12, 3, Vector.Up, 2, 2, Resources.AD, 3, rooms[1], 150, true, 0, 50));
+	    	   rooms[1].getEnemies().add(new ADFire(13, 3, Vector.Up, 2, 2, Resources.AD1, 3, rooms[1], 150, false, 0, 50));
 	    	   rooms[1].getEnemies().add(new Item(14, 3, 0, 0, Resources.ITEM, 0, rooms[1]));
 	    	   // room 2
 	    	   rooms[2].getEnemies().add(new ADFreeze(5, 1, Vector.Up, 2, 2, Resources.AD, 3, rooms[2], 150, true, 0, 50));

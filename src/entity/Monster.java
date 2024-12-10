@@ -19,6 +19,8 @@ public class Monster extends Enemy{
 	private static final long serialVersionUID = 1L;
 	public Monster(int x,int y,Vector facing, int delayTime, int frameCount, byte imgID,  byte attackID, float speed, Room room, int hp, boolean freeze, int damage, int attackTime) {
 		super(x,y,facing, delayTime, frameCount, imgID, speed, room);
+
+		
 		// TODO Auto-generated constructor stub
 		this.hp=hp;
 		this.freeze=freeze;
@@ -104,7 +106,7 @@ public class Monster extends Enemy{
 			TakeDamage(5); // Hồi máu cho quái băng
 		} else {
 			// Nếu không phải quái băng, tức là quái lửa
-			TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
+			TakeDamage(-10); // Gây sát thương cho quái lửa
 		}
 	}
 	
