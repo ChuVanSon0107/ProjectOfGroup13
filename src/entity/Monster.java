@@ -19,6 +19,8 @@ public class Monster extends Enemy{
 	private static final long serialVersionUID = 1L;
 	public Monster(int x,int y,Vector facing, int delayTime, int frameCount, byte imgID,  byte attackID, float speed, Room room, int hp, boolean freeze, int damage, int attackTime) {
 		super(x,y,facing, delayTime, frameCount, imgID, speed, room);
+
+		
 		// TODO Auto-generated constructor stub
 		this.hp=hp;
 		this.freeze=freeze;
@@ -61,7 +63,7 @@ public class Monster extends Enemy{
 		Rectangle r= this.intersection(player);
 		if(r.isEmpty() || r.width * r.height < 20 ) {
 			imgID = moveID;
-			super.frameCount=2;
+			super.frameCount=1;
 			return;
 		}
 		super.imgID = attackID;
@@ -72,10 +74,6 @@ public class Monster extends Enemy{
 			SetAlive(false);
 		}
 	}
-
-	//add
-	public int countExist = 10;
-
 	public void CollisionQ() {
 		
 		if(stunTime==0) {
@@ -92,15 +90,12 @@ public class Monster extends Enemy{
 	
 		// Kiểm tra nếu quái là quái băng
 		if (freeze) {
-			//TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái băng
+			//TakeDamage(-player.GetQPos().GetDamage());
 			TakeDamage(-10); // Gây sát thương cho quái băng
-
 		} else {
 			// Nếu không phải quái băng, tức là quái lửa
 			TakeDamage(5); // Hồi máu cho quái lửa
 		}
-
-
 	}
 	
 	public void CollisionE() {
@@ -112,12 +107,8 @@ public class Monster extends Enemy{
 			TakeDamage(5); // Hồi máu cho quái băng
 		} else {
 			// Nếu không phải quái băng, tức là quái lửa
-			//TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
 			TakeDamage(-10); // Gây sát thương cho quái lửa
-
 		}
-
-
 	}
 	
 	protected void TakeDamage(int amount) {
