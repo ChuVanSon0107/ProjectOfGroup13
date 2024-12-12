@@ -12,7 +12,7 @@ public class Player extends Entity{
 	public Player(int x,int y,int delayTime, int frameCount, byte imgID, float speed) {
 		super(x,y,Vector.Up, delayTime, frameCount, imgID, speed);
 		// TODO Auto-generated constructor stub
-		hp = 50;
+		hp = 40;
 		mp = 30;
 		def = 0;
 		QTime = 0;
