@@ -96,7 +96,7 @@ public class World {
 		for(Room room : rooms) {
 			room.SetPlayer(player);
 		}
-		player.SetRoom(rooms[4]);
+		player.SetRoom(rooms[0]);
 		// ADDING PRINCESS
 		rooms[5].getPrincesses().add(new Princess(8,2,640,1,Resources.PRINCESS1,0));
 
