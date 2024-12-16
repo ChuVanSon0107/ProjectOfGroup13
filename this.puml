@@ -1,0 +1,18 @@
+@startuml
+package game_world {
+}
+package game_sate {
+}
+package entity {
+}
+package image {
+}
+package main {
+}
+package conversation {
+}
+package path_finding {
+}
+package resources {
+}
+@enduml

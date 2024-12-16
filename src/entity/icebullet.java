@@ -3,7 +3,6 @@ package entity;
 import java.awt.Rectangle;
 
 import game_world.Room;
-import game_world.Vector;
 
 public class icebullet extends Enemy{
 	private static final long serialVersionUID = 1L;

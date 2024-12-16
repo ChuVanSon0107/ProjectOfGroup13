@@ -1,4 +1,4 @@
-package game_world;
+package entity;
 
 public class Vector {
 	public float x;

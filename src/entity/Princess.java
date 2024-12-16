@@ -2,7 +2,7 @@ package entity;
 
 import java.awt.Graphics;
 
-import game_world.Vector;
+
 import resources.Resources;
 
 public class Princess extends Entity{

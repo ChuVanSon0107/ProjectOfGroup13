@@ -5,7 +5,6 @@ import java.util.Random;
 
 import game_world.Room;
 import game_world.Tile;
-import game_world.Vector;
 import resources.Resources;
 
 public class ADFreeze extends Monster{
@@ -22,7 +21,6 @@ public class ADFreeze extends Monster{
 	private icebullet b;
 	public void OnLoop() {
 		AnimationDisplay();
-		super.CollisionQ();
 		super.CollisionR();
 		super.CollisionE();
 		for(int i=0;i<Room.Ysize;i++) {
@@ -51,7 +49,7 @@ public class ADFreeze extends Monster{
 			b.x = this.x;
 			b.y = this.y;
 			b.SetAlive(true);
-			b.SetExistTime(100);
+			b.SetExistTime(200);
 		}
 	public void Render(Graphics g) {
 		super.Render(g);

@@ -3,7 +3,6 @@ package entity;
 
 
 import game_world.Room;
-import game_world.Vector;
 
 public class Enemy extends Entity{
 	

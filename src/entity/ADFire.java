@@ -5,7 +5,6 @@ import java.util.Random;
 
 import game_world.Room;
 import game_world.Tile;
-import game_world.Vector;
 import resources.Resources;
 
 public class ADFire extends Monster{
@@ -24,7 +23,6 @@ public class ADFire extends Monster{
 	private firebullet m;
 	public void OnLoop() {
 		AnimationDisplay();
-		super.CollisionQ();
 		super.CollisionR();
 		super.CollisionE();
 		for(int i=0;i<Room.Ysize;i++) {
@@ -61,7 +59,7 @@ public class ADFire extends Monster{
 			m.x=this.x;
 			m.y=this.y;
 			m.SetAlive(true);
-			m.SetExistTime(100);
+			m.SetExistTime(200);
 		}
 	public void Render(Graphics g) {
 		super.Render(g);

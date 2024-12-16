@@ -1,7 +1,6 @@
 package entity;
 
 import game_world.Room;
-import game_world.Vector;
 
 public class firebullet extends icebullet{
 	private static final long serialVersionUID = 1L;

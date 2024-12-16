@@ -4,7 +4,7 @@ import java.awt.Rectangle;
 import java.util.Random;
 
 import game_world.Room;
-import game_world.Vector;
+
 
 public class Item extends Enemy{
 	

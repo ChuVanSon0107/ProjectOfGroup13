@@ -5,7 +5,6 @@ import java.awt.Rectangle;
 
 import game_world.Room;
 import game_world.Tile;
-import game_world.Vector;
 import resources.Resources;
 
 public class Player extends Entity{

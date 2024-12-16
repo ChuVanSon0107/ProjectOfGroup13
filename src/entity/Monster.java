@@ -8,7 +8,7 @@ import game_state.MainMenu;
 import java.awt.Graphics;
 import game_world.Room;
 import game_world.Tile;
-import game_world.Vector;
+
 import path_finding.BFS;
 import resources.Resources;
 
@@ -63,7 +63,7 @@ public class Monster extends Enemy{
 		Rectangle r= this.intersection(player);
 		if(r.isEmpty() || r.width * r.height < 20 ) {
 			imgID = moveID;
-			super.frameCount=2;
+			super.frameCount=1;
 			return;
 		}
 		super.imgID = attackID;
@@ -73,7 +73,8 @@ public class Monster extends Enemy{
 			player.SetFreezeTime(100);
 			SetAlive(false);
 		}
-	}public void CollisionQ() {
+	}
+	public void CollisionQ() {
 		
 		if(stunTime==0) {
 			Rectangle r= this.intersection(player.GetQPos());

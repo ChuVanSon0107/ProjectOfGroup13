@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 import game_world.Room;
-import game_world.Vector;
 import resources.Resources;
 
 public class Boss extends Monster{
@@ -64,13 +63,13 @@ public class Boss extends Monster{
 	public void CollisionR() {
 		Rectangle r = this.intersection(player.GetRPos());
 		if (r.isEmpty()) return;
-		TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái băng
+		TakeDamage(-10); // Gây sát thương cho quái băng
 	}
 	
 	public void CollisionE() {
 		Rectangle e = this.intersection(player.GetEPos());
 		if (e.isEmpty()) return;
-		TakeDamage(-player.GetQPos().GetDamage()); // Gây sát thương cho quái lửa
+		TakeDamage(-10); // Gây sát thương cho quái lửa
 	}
 	public void Render(Graphics g) {
 		if(invisibleTime > 100){

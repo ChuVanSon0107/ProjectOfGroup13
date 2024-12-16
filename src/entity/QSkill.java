@@ -1,6 +1,5 @@
 package entity;
 
-import game_world.Vector;
 
 public class QSkill extends Entity{
 	/**
@@ -10,7 +9,7 @@ public class QSkill extends Entity{
 	public QSkill(int x, int y,Vector facing, int delayTime, int frameCount, byte imgID, float speed) {
 		super(x,y,facing, delayTime, frameCount, imgID, speed);
 		// TODO Auto-generated constructor stub
-		damage = 25;
+		damage = 40;
 		ExistTime = 0;
 	}
 	protected int damage;

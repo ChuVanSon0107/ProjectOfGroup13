@@ -1,6 +1,6 @@
 package entity;
 
-import game_world.Vector;
+
 
 public class RSkill extends QSkill{
 	/**

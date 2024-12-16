@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 import game_world.Tile;
-import game_world.Vector;
 import resources.Resources;
 
 public class Entity extends Rectangle{

@@ -1,11 +1,10 @@
-
 package game_state;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
-
+import entity.Vector;
 import conversation.Conversation;
 import entity.Player;
 import game_world.*;
@@ -39,7 +38,15 @@ public class PlayingState extends GameState{
 				Resources.PLAYER
 		};
 		this.conversation = new Conversation(150, imgIDs, sentences);
+
+
+		bossConversation = false;//add
 	}
+
+
+	private boolean bossConversation = false;//add
+
+
 	@Override
 	public void Loop() {
 		if(this.inConversation == false){
@@ -81,8 +88,30 @@ public class PlayingState extends GameState{
 				}
 			}
 
+			//ADD
+			else if(world.GetCur() == World.count - 2 && bossConversation == false){
+				this.inConversation = true;
+				this.inConversation = true;
+				String[] sentences = new String[]{
+					"Hiệp sĩ ơi, cíu taaaaaaaaaa!!!!!!!",
+					"Với sức mạnh đó cũng đòi đánh bọn ta sao",
+					"Ngươi nghĩ ta không chuẩn bị gì sao",
+					"Thứ vũ khí dùng để khắc chế các ngươi"
+				};
 
-			if(player.getHp() > 0) {
+				byte[] imgIDs = new byte[] {
+					Resources.PRINCESS1,
+					Resources.BOSS,
+					Resources.PLAYER,
+					Resources.PLAYER
+				};
+
+				this.conversation = new Conversation(150, imgIDs, sentences);
+				bossConversation = true;
+			}
+
+			//ADD
+if(player.getHp() > 0) {
 				Room room = world.GetCurrentRoom();
 				room.Loop();
 				player.OnLoop();
@@ -95,6 +124,8 @@ public class PlayingState extends GameState{
 				}
 			}
 		}
+
+
 
 		else{
 			if(conversation != null) {
@@ -130,6 +161,7 @@ public class PlayingState extends GameState{
 		g.drawImage(Resources.TEXTURES.get(Resources.MANAB), 40, 30, player.getMp() * 5, Tile.size*1/5, null);
 		g.drawImage(Resources.TEXTURES.get(Resources.ARMORB), 40, 55, player.getDef() * 5, Tile.size*1/5, null);
 		g.drawImage(Resources.TEXTURES.get(Resources.ULTIB), 40, 80, player.getRTime()/5, Tile.size*1/5, null);
+		g.drawImage(Resources.TEXTURES.get(Resources.ULTIB), 40, 80, player.getETime()/5, Tile.size*1/5, null);
 	}
 
 	@Override
@@ -195,7 +227,7 @@ public class PlayingState extends GameState{
 			player.SetMove(false);
 			break;
 		case KeyEvent.VK_DOWN:
-			player.SetMove(false);
+player.SetMove(false);
 			break;
 		case KeyEvent.VK_LEFT:
 			player.SetMove(false);

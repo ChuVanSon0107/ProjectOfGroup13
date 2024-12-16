@@ -3,7 +3,7 @@ import java.util.Queue;
 import java.util.ArrayDeque;
 
 import game_world.Tile;
-import game_world.Vector;
+import entity.Vector;
 
 public class BFS {
 	private Tile[][] tiles;
